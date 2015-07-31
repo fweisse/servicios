@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:PLANES_COMERCIALES_SOCIO_Resp
+    xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.osde.com.ar/PUB/PlanesComercialesSocio/response">
+    <E_PLANES>
+        <PREFIJO>2</PREFIJO>
+        <PLAN>210</PLAN>
+        <DESCRIPCION>PLAN 2 210</DESCRIPCION>
+    </E_PLANES>
+    <E_PLANES>
+        <PREFIJO>2</PREFIJO>
+        <PLAN>310</PLAN>
+        <DESCRIPCION>PLAN 2 310</DESCRIPCION>
+    </E_PLANES>
+    <E_PLANES>
+        <PREFIJO>2</PREFIJO>
+        <PLAN>410</PLAN>
+        <DESCRIPCION>PLAN 2 410</DESCRIPCION>
+    </E_PLANES>
+    <E_PLANES>
+        <PREFIJO>2</PREFIJO>
+        <PLAN>450</PLAN>
+        <DESCRIPCION>PLAN 2 450</DESCRIPCION>
+    </E_PLANES>
+    <E_PLANES>
+        <PREFIJO>2</PREFIJO>
+        <PLAN>510</PLAN>
+        <DESCRIPCION>PLAN 2 510</DESCRIPCION>
+    </E_PLANES>
+</ns1:PLANES_COMERCIALES_SOCIO_Resp>

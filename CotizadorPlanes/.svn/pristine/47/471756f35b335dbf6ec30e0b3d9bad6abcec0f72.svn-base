@@ -1,0 +1,17 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Header/>
+	<soap:Body>
+		<TiposGrupoFamiliar_Resp xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">
+			<E_DESCR>
+				<item>
+					<TIPGF>IJO00</TIPGF>
+					<DESCR>Individual Joven</DESCR>
+				</item>
+				<item>
+					<TIPGF>IJO01</TIPGF>
+					<DESCR>Individual Joven con 1 hijo</DESCR>
+				</item>
+			</E_DESCR>
+		</TiposGrupoFamiliar_Resp>
+	</soap:Body>
+</soap:Envelope>

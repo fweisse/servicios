@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cot:getPlanesResponse xmlns:cot="http://osde.com.ar/services/CotizadorPlanes"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<cot:PlanCotizador>
+		<list xsi:type="cot:planCotizador">
+			<id>2210</id>
+			<numero>210</numero>
+			<prefijoPlan>2</prefijoPlan>
+		</list>
+		<list xsi:type="cot:planCotizador">
+			<id>2310</id>
+			<numero>310</numero>
+			<prefijoPlan>2</prefijoPlan>
+		</list>
+		<list xsi:type="cot:planCotizador">
+			<id>2410</id>
+			<numero>410</numero>
+			<prefijoPlan>2</prefijoPlan>
+		</list>
+		<list xsi:type="cot:planCotizador">
+			<id>2450</id>
+			<numero>450</numero>
+			<prefijoPlan>2</prefijoPlan>
+		</list>
+		<list xsi:type="cot:planCotizador">
+			<id>2510</id>
+			<numero>510</numero>
+			<prefijoPlan>2</prefijoPlan>
+		</list>
+		<totalResults>5</totalResults>
+		<truncated>false</truncated>
+	</cot:PlanCotizador>
+</cot:getPlanesResponse>

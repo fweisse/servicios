@@ -1,0 +1,1 @@
+org.switchyard.HandlerException: SWITCHYARD033902: camel exchange failed without an exception: java.io.StringReader

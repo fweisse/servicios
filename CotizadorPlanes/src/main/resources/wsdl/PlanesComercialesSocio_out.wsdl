@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ConPlanesComercialesSocio_out"
+	targetNamespace="http://www.osde.com.ar/PUB/PlanesComercialesSocio"
+	xmlns:p2="http://www.osde.com.ar/PUB/PlanesComercialesSocio/response"
+	xmlns:p1="http://www.osde.com.ar/PUB/PlanesComercialesSocio" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+	xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+	<wsdl:documentation />
+	<wsp:UsingPolicy wsdl:required="true" />
+	<wsp:Policy wsu:Id="OP_ConPlanesComercialesSocio_out" />
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://www.osde.com.ar/canonicos/DT"
+			xmlns="http://www.osde.com.ar/canonicos/DT" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:complexType name="fault">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/VersionID">03b52c8cb13211dfb4d20000004308be
+					</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="faultcode" type="xsd:string"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">af0679d9b11011df9cd34487fc717f72
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="faultstring" type="xsd:string"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">af0679dab11011df8e104487fc717f72
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="faultactor" type="xsd:string">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">af0679dbb11011dfbe294487fc717f72
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+		<xsd:schema targetNamespace="http://www.osde.com.ar/PUB/PlanesComercialesSocio"
+			xmlns="http://www.osde.com.ar/PUB/PlanesComercialesSocio" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element name="PLANES_COMERCIALES_SOCIO_Req" type="PLANES_COMERCIALES_SOCIO_Req" />
+			<xsd:complexType name="PLANES_COMERCIALES_SOCIO_Req">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/VersionID">47fea7104a5811e0996800000067d252
+					</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="I_PREFIJO" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="I_PLAN" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+		<xsd:schema
+			targetNamespace="http://www.osde.com.ar/PUB/PlanesComercialesSocio/response"
+			xmlns:p8="http://www.osde.com.ar/canonicos/DT" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			xmlns="http://www.osde.com.ar/PUB/PlanesComercialesSocio/response">
+			<xsd:import namespace="http://www.osde.com.ar/canonicos/DT" />
+			<xsd:element name="PLANES_COMERCIALES_SOCIO_Resp" type="PLANES_COMERCIALES_SOCIO_Resp" />
+			<xsd:complexType name="PLANES_COMERCIALES_SOCIO_Resp">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/VersionID">621b5bec4a7411e08fb100000067d252
+					</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="E_PLANES" type="E_PLANES" minOccurs="0"
+						maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">e5bbf7394a5911e0c8db6c626d5cfc91
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="fault" type="p8:fault" minOccurs="0">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">2b4863714a7511e0ade76c626d5cfc91
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="E_PLANES">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/VersionID">49669f6c4a5911e0831e00000067d252
+					</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="PREFIJO" type="xsd:string"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">032a05e34a5a11e09eca6c626d5cfc91
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="PLAN" type="xsd:string" minOccurs="0">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">032a05e44a5a11e0855f6c626d5cfc91
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="DESCRIPCION" type="xsd:string"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">032a05e54a5a11e083a56c626d5cfc91
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="PLANES_COMERCIALES_SOCIO_Req">
+		<wsdl:documentation />
+		<wsdl:part name="PLANES_COMERCIALES_SOCIO_Req" element="p1:PLANES_COMERCIALES_SOCIO_Req" />
+	</wsdl:message>
+	<wsdl:message name="p2.PLANES_COMERCIALES_SOCIO_Resp">
+		<wsdl:documentation />
+		<wsdl:part name="PLANES_COMERCIALES_SOCIO_Resp" element="p2:PLANES_COMERCIALES_SOCIO_Resp" />
+	</wsdl:message>
+	<wsdl:portType name="ConPlanesComercialesSocio_out">
+		<wsdl:documentation />
+		<wsdl:operation name="ConPlanesComercialesSocio_out">
+			<wsdl:documentation />
+			<wsp:Policy>
+				<wsp:PolicyReference URI="#OP_ConPlanesComercialesSocio_out" />
+			</wsp:Policy>
+			<wsdl:input message="p1:PLANES_COMERCIALES_SOCIO_Req" />
+			<wsdl:output message="p1:p2.PLANES_COMERCIALES_SOCIO_Resp" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="ConPlanesComercialesSocio_outBinding"
+		type="p1:ConPlanesComercialesSocio_out">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+		<wsdl:operation name="ConPlanesComercialesSocio_out">
+			<soap:operation soapAction="http://sap.com/xi/WebService/soap1.1"
+				xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+			<wsdl:input>
+				<soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="XI_5a483ca69f2f3fe7ade7bf408c8d6f74_Service">
+		<wsdl:port name="HTTP_Port" binding="p1:ConPlanesComercialesSocio_outBinding">
+			<soap:address
+				location="http://dsolapp0:50000/XISOAPAdapter/MessageServlet?channel=*:PUBLIC_D:SOAPSenderPlanesComercialesSocio"
+				xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

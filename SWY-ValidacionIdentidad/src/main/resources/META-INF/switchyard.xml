@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sy:switchyard xmlns:camel="urn:switchyard-component-camel:config:1.0" xmlns:http="urn:switchyard-component-http:config:1.0" xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912" xmlns:soap="urn:switchyard-component-soap:config:1.0" xmlns:sy="urn:switchyard-config:switchyard:1.0" name="SWY-ValidacionIdentidad" targetNamespace="urn:ar.com.osde.fsw.tecnologia.validacionidentidad:SWY-ValidacionIdentidad:1.0">
+  <sca:composite name="SWY-ValidacionIdentidad" targetNamespace="urn:ar.com.osde.fsw.tecnologia.validacionidentidad:SWY-ValidacionIdentidad:1.0">
+    <sca:service name="ValidacionIdentidad" promote="CamelDSLRoute/ValidacionIdentidad">
+      <sca:interface.wsdl interface="META-INF/wsdl/ValidacionIdentidad.wsdl#wsdl.porttype(ValidacionIdentidad)"/>
+      <soap:binding.soap name="validacionIdentidadSOAPConsumer">
+        <soap:contextMapper soapHeadersType="VALUE"/>
+        <soap:wsdl>META-INF/wsdl/ValidacionIdentidad.wsdl</soap:wsdl>
+        <soap:wsdlPort>ValidacionIdentidadPort</soap:wsdlPort>
+        <soap:socketAddr>:9090</soap:socketAddr>
+        <soap:contextPath>validacionidentidad</soap:contextPath>
+      </soap:binding.soap>
+    </sca:service>
+    <sca:component name="CamelDSLRoute">
+      <camel:implementation.camel>
+        <camel:java class="ar.com.osde.fsw.tecnologia.validacionidentidad.SWYValidacionIdentidad.camel.CamelDSLRoute"/>
+      </camel:implementation.camel>
+      <sca:service name="ValidacionIdentidad">
+        <sca:interface.wsdl interface="META-INF/wsdl/ValidacionIdentidad.wsdl#wsdl.porttype(ValidacionIdentidad)"/>
+      </sca:service>
+      <sca:reference name="NoSocioWebService">
+        <sca:interface.wsdl interface="META-INF/wsdl/noSocio.wsdl#wsdl.porttype(NoSocioWebService)"/>
+      </sca:reference>
+      <sca:reference name="ConEmpresasGenerica2">
+        <sca:interface.wsdl interface="META-INF/wsdl/ConEmpresasGenerica2_Out_1.wsdl#wsdl.porttype(ConEmpresasGenerica2_Out)"/>
+      </sca:reference>
+    </sca:component>
+    <sca:reference name="NoSocioWebService" multiplicity="0..1" promote="CamelDSLRoute/NoSocioWebService">
+      <sca:interface.wsdl interface="META-INF/wsdl/noSocio.wsdl#wsdl.porttype(NoSocioWebService)"/>
+      <http:binding.http name="noSocioHTTPProvider">
+        <http:address>http://localhost:8088/mockNoSocioWebServiceImplServiceSoapBinding</http:address>
+        <http:method>POST</http:method>
+        <http:contentType>text/html</http:contentType>
+        <http:basic>
+          <http:user>piappluser</http:user>
+          <http:password>osde10sap</http:password>
+        </http:basic>
+      </http:binding.http>
+    </sca:reference>
+    <sca:reference name="ConEmpresasGenerica2" multiplicity="0..1" promote="CamelDSLRoute/ConEmpresasGenerica2">
+      <sca:interface.wsdl interface="META-INF/wsdl/ConEmpresasGenerica2_Out_1.wsdl#wsdl.porttype(ConEmpresasGenerica2_Out)"/>
+      <http:binding.http name="conEmpresaGenericaHTTPProvider">
+        <http:address>http://localhost:8088/mockConEmpresasGenerica2_OutBinding</http:address>
+        <http:method>POST</http:method>
+        <http:contentType>text/html</http:contentType>
+        <http:basic>
+          <http:user>piappluser</http:user>
+          <http:password>osde10sap</http:password>
+        </http:basic>
+      </http:binding.http>
+    </sca:reference>
+  </sca:composite>
+  <sy:domain>
+    <sy:properties>
+      <sy:property name="org.switchyard.handlers.messageTrace.enabled" value="false"/>
+    </sy:properties>
+  </sy:domain>
+</sy:switchyard>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<switchyard xmlns="urn:switchyard-config:switchyard:1.1" xmlns:sy="urn:switchyard-config:switchyard:1.1" xmlns:camel="urn:switchyard-component-camel:config:1.1" xmlns:http="urn:switchyard-component-http:config:1.1" xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912" xmlns:soap="urn:switchyard-component-soap:config:1.1" name="EjecutarPGRP7" targetNamespace="urn:com.example.switchyard:EjecutarPGRP7:1.0">
+  <sca:composite name="EjecutarPGRP7" targetNamespace="urn:com.example.switchyard:EjecutarPGRP7:1.0">
+    <sca:reference name="EjecutarPGRP7Provider" multiplicity="0..1" promote="EjecutarPGRP7CacheComponent/EjecutarPGRP7Provider">
+      <sca:interface.wsdl interface="wsdl/EjecutarPGRP7.wsdl#wsdl.porttype(ConPGRP7_Out)"/>
+      <http:binding.http name="httpReferenceEjecutarPGRP7">
+        <http:address>${EjecutarPGRP7.ProviderEjecutarPGRP7.locationURI}</http:address>
+        <http:method>POST</http:method>
+        <http:contentType>text/xml</http:contentType>
+        <http:timeout>${ESBConfiguration.sapPi.timeout}</http:timeout>
+        <http:basic>
+          <http:user>${ESBConfiguration.sapPi.basicAuthenticationUsername}</http:user>
+          <http:password>${ESBConfiguration.sapPi.basicAuthenticationPassword}</http:password>
+        </http:basic>
+      </http:binding.http>
+    </sca:reference>
+    <sca:component name="EjecutarPGRP7Component">
+      <camel:implementation.camel>
+        <camel:java class="ar.com.osde.services.ejecutarpgrp7.routebuilder.EjecutarPGRP7RouteBuilder"/>
+      </camel:implementation.camel>
+      <sca:service name="EjecutarPGRP7">
+        <sca:interface.wsdl interface="wsdl/EjecutarPGRP7.wsdl#wsdl.porttype(ConPGRP7_Out)"/>
+      </sca:service>
+      <sca:reference name="EjecutarPGRP7Camel">
+        <sca:interface.wsdl interface="wsdl/EjecutarPGRP7.wsdl#wsdl.porttype(ConPGRP7_Out)"/>
+      </sca:reference>
+      <sca:reference name="EjecutarPGRP7HTTPBinding">
+        <sca:interface.wsdl interface="wsdl/EjecutarPGRP7.wsdl#wsdl.porttype(ConPGRP7_Out)"/>
+      </sca:reference>
+    </sca:component>
+    <sca:service name="EjecutarPGRP7" promote="EjecutarPGRP7Component/EjecutarPGRP7">
+      <http:binding.http name="httpServiceEjecutarPGRP7">
+        <operationSelector operationName="ConPGRP7_Out"/>
+        <http:contextPath>EjecutarPGRP7</http:contextPath>
+      </http:binding.http>
+    </sca:service>
+    <sca:component name="EjecutarPGRP7CacheComponent">
+      <camel:implementation.camel>
+        <camel:java class="ar.com.osde.services.ejecutarpgrp7.routebuilder.EjecutarPGRP7CacheRouteBuilder"/>
+      </camel:implementation.camel>
+      <sca:service name="EjecutarPGRP7Camel">
+        <sca:interface.wsdl interface="wsdl/EjecutarPGRP7.wsdl#wsdl.porttype(ConPGRP7_Out)"/>
+      </sca:service>
+      <sca:reference name="EjecutarPGRP7Provider">
+        <sca:interface.wsdl interface="wsdl/EjecutarPGRP7.wsdl#wsdl.porttype(ConPGRP7_Out)"/>
+      </sca:reference>
+    </sca:component>
+    <sca:component name="EjecutarPGRP7HTTPBindingComponent">
+      <camel:implementation.camel>
+        <camel:java class="ar.com.osde.services.ejecutarpgrp7.routebuilder.EjecutarPGRP7HTTPBindingRouteBuilder"/>
+      </camel:implementation.camel>
+      <sca:service name="EjecutarPGRP7HTTPBinding">
+        <sca:interface.wsdl interface="wsdl/EjecutarPGRP7.wsdl#wsdl.porttype(ConPGRP7_Out)"/>
+      </sca:service>
+      <sca:reference name="EjecutarPGRP7Camel">
+        <sca:interface.wsdl interface="wsdl/EjecutarPGRP7.wsdl#wsdl.porttype(ConPGRP7_Out)"/>
+      </sca:reference>
+    </sca:component>
+  </sca:composite>
+  <domain>
+    <properties>
+      <property name="EjecutarPGRP7.ProviderEjecutarPGRP7.locationURI" value="http://dsolapp0.datacenter.osde.ar:50000/XISOAPAdapter/MessageServlet?channel=*:PUBLIC_D:SOAPSenderEjecutarPGRP7"/>
+      <property name="jettyPort" value="8080"/>
+      <property name="ESBConfiguration.sapPi.timeout" value="10000"/>
+      <property name="ESBConfiguration.sapPi.basicAuthenticationUsername" value="piappluser"/>
+      <property name="ESBConfiguration.sapPi.basicAuthenticationPassword" value="osde10sap"/>
+    </properties>
+  </domain>
+</switchyard>

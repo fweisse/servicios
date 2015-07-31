@@ -1,0 +1,170 @@
+<wsdl:definitions xmlns:ns1="http://wsServices.services.ccg.osde.com.ar/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	name="NoSocioWebService" targetNamespace="http://wsServices.services.ccg.osde.com.ar/">
+	<wsdl:types>
+		<xs:schema xmlns:tns="http://wsServices.services.ccg.osde.com.ar/"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+			elementFormDefault="unqualified" targetNamespace="http://wsServices.services.ccg.osde.com.ar/">
+			<xs:complexType name="noSocioOsdeBinarioDTO">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="apellido" type="xs:string" />
+
+					<xs:element minOccurs="0" name="email1" type="xs:string" />
+
+					<xs:element minOccurs="0" name="fechaAlta" type="xs:dateTime" />
+
+					<xs:element minOccurs="0" name="fechaNacimientoDate"
+						type="xs:dateTime" />
+
+					<xs:element minOccurs="0" name="ic" type="xs:string" />
+
+					<xs:element minOccurs="0" name="idNoSocio" type="xs:long" />
+
+					<xs:element maxOccurs="unbounded" minOccurs="0"
+						name="listDocumentos" nillable="true" type="tns:documentoDTO" />
+
+					<xs:element maxOccurs="unbounded" minOccurs="0"
+						name="listDomicilios" nillable="true" type="tns:domicilioDTO" />
+
+					<xs:element minOccurs="0" name="nombre" type="xs:string" />
+
+					<xs:element minOccurs="0" name="nombreCompleto" type="xs:string" />
+
+					<xs:element minOccurs="0" name="sexo" type="xs:string" />
+
+					<xs:element minOccurs="0" name="telefonoLaboral" type="xs:string" />
+
+					<xs:element minOccurs="0" name="telefonoParticular"
+						type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="documentoDTO">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="numero" type="xs:string" />
+
+					<xs:element minOccurs="0" name="tipo" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="domicilioDTO">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="barrio" type="xs:string" />
+
+					<xs:element minOccurs="0" name="calle" type="xs:string" />
+
+					<xs:element minOccurs="0" name="codigoPostal" type="xs:string" />
+
+					<xs:element minOccurs="0" name="depto" type="xs:string" />
+
+					<xs:element minOccurs="0" name="domicilioActual" type="xs:string" />
+
+					<xs:element minOccurs="0" name="localidad" type="xs:string" />
+
+					<xs:element minOccurs="0" name="numero" type="xs:string" />
+
+					<xs:element minOccurs="0" name="pais" type="xs:string" />
+
+					<xs:element minOccurs="0" name="piso" type="xs:string" />
+
+					<xs:element minOccurs="0" name="provinciaCodigo" type="xs:string" />
+
+					<xs:element minOccurs="0" name="provinciaDesc" type="xs:string" />
+
+					<xs:element minOccurs="0" name="tipoDomicilioCodigo"
+						type="xs:string" />
+
+					<xs:element minOccurs="0" name="tipoDomicilioDsc" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:element name="createNoSocio" type="tns:createNoSocio" />
+
+			<xs:complexType name="createNoSocio">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="nombre" type="xs:string" />
+
+					<xs:element minOccurs="0" name="apellido" type="xs:string" />
+
+					<xs:element minOccurs="0" name="tipoDocumento" type="xs:string" />
+
+					<xs:element minOccurs="0" name="documento" type="xs:string" />
+
+					<xs:element minOccurs="0" name="mail" type="xs:string" />
+
+					<xs:element minOccurs="0" name="nroTelefono" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:element name="createNoSocioResponse" type="tns:createNoSocioResponse" />
+
+			<xs:complexType name="createNoSocioResponse">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="return" type="xs:boolean" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:element name="buscarNoSocio" type="tns:buscarNoSocio" />
+
+			<xs:complexType name="buscarNoSocio">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="nombre" type="xs:string" />
+
+					<xs:element minOccurs="0" name="apellido" type="xs:string" />
+
+					<xs:element minOccurs="0" name="tipoDocumento" type="xs:string" />
+
+					<xs:element minOccurs="0" name="documento" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:element name="buscarNoSocioResponse" type="tns:buscarNoSocioResponse" />
+
+			<xs:complexType name="buscarNoSocioResponse">
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="return"
+						type="tns:noSocioOsdeBinarioDTO" />
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+	</wsdl:types>
+
+	<wsdl:message name="buscarNoSocioResponse">
+		<wsdl:part element="ns1:buscarNoSocioResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+
+	<wsdl:message name="buscarNoSocio">
+		<wsdl:part element="ns1:buscarNoSocio" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+
+	<wsdl:message name="createNoSocioResponse">
+		<wsdl:part element="ns1:createNoSocioResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+
+	<wsdl:message name="createNoSocio">
+		<wsdl:part element="ns1:createNoSocio" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+
+	<wsdl:portType name="NoSocioWebService">
+		<wsdl:operation name="createNoSocio">
+			<wsdl:input message="ns1:createNoSocio" name="createNoSocio">
+			</wsdl:input>
+
+			<wsdl:output message="ns1:createNoSocioResponse" name="createNoSocioResponse">
+			</wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="buscarNoSocio">
+			<wsdl:input message="ns1:buscarNoSocio" name="buscarNoSocio">
+			</wsdl:input>
+
+			<wsdl:output message="ns1:buscarNoSocioResponse" name="buscarNoSocioResponse">
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+</wsdl:definitions>
+

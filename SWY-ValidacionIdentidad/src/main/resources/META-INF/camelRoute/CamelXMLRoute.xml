@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+
+<routes xmlns="http://camel.apache.org/schema/spring">
+
+<!-- <camelContext xmlns:val="http://osde.com.ar/services/atencion/validacionidentidad" xmlns:val1="http://validacionidentidad.entities.osde.ar"/> -->
+  <route>
+    <from uri="switchyard://ValidacionIdentidad"/>
+    <log message="ValidacionIdentidad - message received: ${body}"/>
+    <setProperty propertyName="vi.request">
+      <xpath>/val:validar/val1:validacionFilter</xpath>
+    </setProperty>
+    <log message="ValidacionIdentidad - message received: ${property[vi.request]}"/>
+  </route>
+</routes>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sy:switchyard xmlns:camel="urn:switchyard-component-camel:config:1.0" xmlns:http="urn:switchyard-component-http:config:1.0" xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912" xmlns:soap="urn:switchyard-component-soap:config:1.0" xmlns:sy="urn:switchyard-config:switchyard:1.0" name="CuentaDataNet" targetNamespace="urn:ar.com.osde.fsw.socio:CuentaDataNet:1.0">
+  <sca:composite name="CuentaDataNet" targetNamespace="urn:ar.com.osde.fsw.socio:CuentaDataNet:1.0">
+    <sca:component name="Route">
+      <camel:implementation.camel>
+        <camel:xml path="route.xml"/>
+      </camel:implementation.camel>
+      <sca:service name="CuentaDataNet">
+        <sca:interface.wsdl interface="META-INF/wsdl/CuentaDataNetService.wsdl#wsdl.porttype(CuentaDataNetService)"/>
+      </sca:service>
+      <sca:reference name="ConCtasDatanetOut">
+        <sca:interface.wsdl interface="META-INF/wsdl/ConCtasDatanet_Out.wsdl#wsdl.porttype(ConCtasDatanet_Out)"/>
+      </sca:reference>
+    </sca:component>
+    <sca:service name="CuentaDataNet" promote="Route/CuentaDataNet">
+      <sca:interface.wsdl interface="META-INF/wsdl/CuentaDataNetService.wsdl#wsdl.porttype(CuentaDataNetService)"/>
+      <soap:binding.soap name="consumer">
+        <soap:wsdl>META-INF/wsdl/CuentaDataNetService.wsdl</soap:wsdl>
+        <soap:wsdlPort>CuentaDataNetServicePort</soap:wsdlPort>
+        <soap:socketAddr>:9090</soap:socketAddr>
+      </soap:binding.soap>
+    </sca:service>
+    <sca:reference name="ConCtasDatanetOut" multiplicity="0..1" promote="Route/ConCtasDatanetOut">
+      <sca:interface.wsdl interface="META-INF/wsdl/ConCtasDatanet_Out.wsdl#wsdl.porttype(ConCtasDatanet_Out)"/>
+      <http:binding.http name="http1">
+        <http:address>http://localhost:8470/mockConCtasDatanet_OutBinding</http:address>
+        <http:method>POST</http:method>
+        <http:contentType>text/xml</http:contentType>
+        <http:basic>
+          <http:user>piappluser</http:user>
+          <http:password>osde10sap</http:password>
+        </http:basic>
+      </http:binding.http>
+    </sca:reference>
+  </sca:composite>
+  <sy:domain>
+    <sy:properties>
+      <sy:property name="org.switchyard.handlers.messageTrace.enabled" value="false"/>
+      <sy:property name="cuentadatanetPI" value="http://testpi.osde.ar/XISOAPAdapter/MessageServlet?channel=*:PUBLIC_T:SOAPSenderCuentasDatanet"/>
+    </sy:properties>
+  </sy:domain>
+</sy:switchyard>

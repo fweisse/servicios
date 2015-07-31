@@ -1,0 +1,21 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<soapenv:Header />
+	<soapenv:Body>
+		<envelope>
+			<header>
+				<message>ejecutarPGRP7</message>
+			</header>
+			<body>
+				<IPGRUP>
+					<IOSOCIO>60653633602</IOSOCIO>
+					<FECHA>20150416</FECHA>
+				</IPGRUP>
+			</body>
+			<fault>
+				<faultcode />
+				<faultstring />
+				<faultactor />
+			</fault>
+		</envelope>
+	</soapenv:Body>
+</soapenv:Envelope>

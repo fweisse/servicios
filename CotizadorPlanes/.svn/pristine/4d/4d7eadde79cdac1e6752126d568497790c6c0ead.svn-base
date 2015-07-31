@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ConTipoGrupoFamiliar_out"
+	targetNamespace="http://www.osde.com.ar/PUB/TiposGrupoFamiliar"
+	xmlns:p2="http://www.osde.com.ar/PUB/TiposGrupoFamiliar/response"
+	xmlns:p1="http://www.osde.com.ar/PUB/TiposGrupoFamiliar" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+	xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+	<wsdl:documentation />
+	<wsp:UsingPolicy wsdl:required="true" />
+	<wsp:Policy wsu:Id="OP_ConTipoGrupoFamiliar_out" />
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://www.osde.com.ar/canonicos/DT"
+			xmlns="http://www.osde.com.ar/canonicos/DT" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:complexType name="fault">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/VersionID">03b52c8cb13211dfb4d20000004308be
+					</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="faultcode" type="xsd:string"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">af0679d9b11011df9cd34487fc717f72
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="faultstring" type="xsd:string"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">af0679dab11011df8e104487fc717f72
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="faultactor" type="xsd:string">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">af0679dbb11011dfbe294487fc717f72
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+		<xsd:schema targetNamespace="http://www.osde.com.ar/PUB/TiposGrupoFamiliar"
+			xmlns="http://www.osde.com.ar/PUB/TiposGrupoFamiliar" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:complexType name="TiposGrupoFamiliar_Req">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/VersionID">37d1908e4a5f11e09d0000000067d252
+					</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="I_TIPOGFT" type="xsd:string"
+						minOccurs="0" />
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+		<xsd:schema targetNamespace="http://www.osde.com.ar/PUB/TiposGrupoFamiliar/response"
+			xmlns:p8="http://www.osde.com.ar/canonicos/DT" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			xmlns="http://www.osde.com.ar/PUB/TiposGrupoFamiliar/response">
+			<xsd:import namespace="http://www.osde.com.ar/canonicos/DT" />
+			<xsd:complexType name="E_DESCR">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/VersionID">5fe7cac74b5211e08cd300000067d252
+					</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="item" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">3c6a136b4b5311e089a66c626d5cfc66
+							</xsd:appinfo>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="MANDT" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">3c6a13674b5311e0cc116c626d5cfc66
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="SPRAS" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">3c6a13684b5311e0c83d6c626d5cfc66
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="TIPGF" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">3c6a13694b5311e0b3fa6c626d5cfc66
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="DESCR" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">3c6a136a4b5311e0be6a6c626d5cfc66
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="TiposGrupoFamiliar_Resp">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/VersionID">65f6db714b5211e08f5a00000067d252
+					</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="E_DESCR" type="E_DESCR" minOccurs="0">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">d2a209b04a7f11e080d56c626d5cfc66
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="fault" type="p8:fault" minOccurs="0">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">d2a209b14a7f11e0cc0c6c626d5cfc66
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+		<xsd:schema xmlns:p1="http://www.osde.com.ar/PUB/TiposGrupoFamiliar"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:p95="http://www.osde.com.ar/PUB/TiposGrupoFamiliar/response">
+			<xsd:import namespace="http://www.osde.com.ar/PUB/TiposGrupoFamiliar/response" />
+			<xsd:import namespace="http://www.osde.com.ar/PUB/TiposGrupoFamiliar" />
+			<xsd:element name="TiposGrupoFamiliar_Resp" type="p95:TiposGrupoFamiliar_Resp" />
+			<xsd:element name="TiposGrupoFamiliar_Req" type="p1:TiposGrupoFamiliar_Req" />
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="TiposGrupoFamiliar_Req">
+		<wsdl:documentation />
+		<wsdl:part name="TiposGrupoFamiliar_Req" element="TiposGrupoFamiliar_Req"
+			xmlns="" />
+	</wsdl:message>
+	<wsdl:message name="p2.TiposGrupoFamiliar_Resp">
+		<wsdl:documentation />
+		<wsdl:part name="TiposGrupoFamiliar_Resp" element="TiposGrupoFamiliar_Resp"
+			xmlns="" />
+	</wsdl:message>
+	<wsdl:portType name="ConTipoGrupoFamiliar_out">
+		<wsdl:documentation />
+		<wsdl:operation name="ConTipoGrupoFamiliar_out">
+			<wsdl:documentation />
+			<wsp:Policy>
+				<wsp:PolicyReference URI="#OP_ConTipoGrupoFamiliar_out" />
+			</wsp:Policy>
+			<wsdl:input message="p1:TiposGrupoFamiliar_Req" />
+			<wsdl:output message="p1:p2.TiposGrupoFamiliar_Resp" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="ConTipoGrupoFamiliar_outBinding" type="p1:ConTipoGrupoFamiliar_out">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+		<wsdl:operation name="ConTipoGrupoFamiliar_out">
+			<soap:operation soapAction="http://sap.com/xi/WebService/soap1.1"
+				xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+			<wsdl:input>
+				<soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="XI_48281e3bdd8231a48576fd0416013bf1_Service">
+		<wsdl:port name="HTTP_Port" binding="p1:ConTipoGrupoFamiliar_outBinding">
+			<soap:address
+				location="http://dsolapp0:50000/XISOAPAdapter/MessageServlet?channel=*:PUBLIC_D:SOAPSenderTipoGrupoFamiliar"
+				xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

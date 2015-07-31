@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sy:switchyard xmlns:camel="urn:switchyard-component-camel:config:1.1" xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912" xmlns:soap="urn:switchyard-component-soap:config:1.1" xmlns:sy="urn:switchyard-config:switchyard:1.1" name="CotizadorPlanes" targetNamespace="urn:com.example.switchyard:CotizadorPlanes:1.0">
+  <sca:composite name="CotizadorPlanes" targetNamespace="urn:com.example.switchyard:CotizadorPlanes:1.0">
+    <sca:component name="CotizadorPlanesComponent">
+      <camel:implementation.camel>
+        <camel:java class="ar.com.osde.services.cotizadorplanes.routebuilder.CotizadorPlanesRouteBuilder"/>
+      </camel:implementation.camel>
+      <sca:service name="CotizadorPlanes">
+        <sca:interface.wsdl interface="wsdl/main.wsdl#wsdl.porttype(CotizadorPlanes)"/>
+      </sca:service>
+      <sca:reference name="GetPlanes">
+        <sca:interface.wsdl interface="wsdl/main.wsdl#wsdl.porttype(CotizadorPlanes)"/>
+      </sca:reference>
+      <sca:reference name="GetEsquemaFamiliar">
+        <sca:interface.wsdl interface="wsdl/main.wsdl#wsdl.porttype(CotizadorPlanes)"/>
+      </sca:reference>
+    </sca:component>
+    <sca:service name="CotizadorPlanes" promote="CotizadorPlanesComponent/CotizadorPlanes">
+      <sca:interface.wsdl interface="wsdl/main.wsdl#wsdl.porttype(CotizadorPlanes)"/>
+      <soap:binding.soap name="CotizadorPlanesSoapBinding">
+        <soap:contextMapper includes=".*" soapHeadersType="VALUE"/>
+        <soap:wsdl>wsdl/main.wsdl</soap:wsdl>
+        <soap:wsdlPort>CotizadorPlanesPort</soap:wsdlPort>
+        <soap:socketAddr>:${jettyPort}</soap:socketAddr>
+        <soap:contextPath>CotizadorPlanes</soap:contextPath>
+      </soap:binding.soap>
+    </sca:service>
+    <sca:reference name="PlanesComercialesSocio" multiplicity="0..1" promote="GetPlanesComponent/PlanesComercialesSocio">
+      <sca:interface.wsdl interface="wsdl/PlanesComercialesSocio_out.wsdl#wsdl.porttype(ConPlanesComercialesSocio_out)"/>
+      <soap:binding.soap name="PlanesComercialesSocioBinding">
+        <soap:wsdl>wsdl/PlanesComercialesSocio_out.wsdl</soap:wsdl>
+        <soap:endpointAddress>${CotizadorPlanes.ProviderPlanesComercialesSocio.locationURI}</soap:endpointAddress>
+        <soap:timeout>${ESBConfiguration.sapPi.timeout}</soap:timeout>
+        <soap:basic>
+          <soap:user>${ESBConfiguration.sapPi.basicAuthenticationUsername}</soap:user>
+          <soap:password>${ESBConfiguration.sapPi.basicAuthenticationPassword}</soap:password>
+        </soap:basic>
+      </soap:binding.soap>
+    </sca:reference>
+    <sca:reference name="TipoGrupoFamiliar" multiplicity="0..1" promote="GetEsquemaFamiliarComponent/TipoGrupoFamiliar">
+      <sca:interface.wsdl interface="wsdl/TipoGrupoFamiliar_out.wsdl#wsdl.porttype(ConTipoGrupoFamiliar_out)"/>
+      <soap:binding.soap name="TipoGrupoFamiliar">
+        <soap:wsdl>wsdl/TipoGrupoFamiliar_out.wsdl</soap:wsdl>
+        <soap:wsdlPort>HTTP_Port</soap:wsdlPort>
+        <soap:endpointAddress>${CotizadorPlanes.ProviderTipoGrupoFamiliar.locationURI}</soap:endpointAddress>
+        <soap:timeout>${ESBConfiguration.sapPi.timeout}</soap:timeout>
+        <soap:basic>
+          <soap:user>${ESBConfiguration.sapPi.basicAuthenticationUsername}</soap:user>
+          <soap:password>${ESBConfiguration.sapPi.basicAuthenticationPassword}</soap:password>
+        </soap:basic>
+      </soap:binding.soap>
+    </sca:reference>
+    <sca:component name="GetPlanesComponent">
+      <camel:implementation.camel>
+        <camel:java class="ar.com.osde.services.cotizadorplanes.routebuilder.GetPlanes"/>
+      </camel:implementation.camel>
+      <sca:service name="GetPlanes">
+        <sca:interface.wsdl interface="wsdl/main.wsdl#wsdl.porttype(CotizadorPlanes)"/>
+      </sca:service>
+      <sca:reference name="PlanesComercialesSocio">
+        <sca:interface.wsdl interface="wsdl/PlanesComercialesSocio_out.wsdl#wsdl.porttype(ConPlanesComercialesSocio_out)"/>
+      </sca:reference>
+    </sca:component>
+    <sca:component name="GetEsquemaFamiliarComponent">
+      <camel:implementation.camel>
+        <camel:java class="ar.com.osde.services.cotizadorplanes.routebuilder.GetEsquemaFamiliar"/>
+      </camel:implementation.camel>
+      <sca:service name="GetEsquemaFamiliar">
+        <sca:interface.wsdl interface="wsdl/main.wsdl#wsdl.porttype(CotizadorPlanes)"/>
+      </sca:service>
+      <sca:reference name="TipoGrupoFamiliar">
+        <sca:interface.wsdl interface="wsdl/TipoGrupoFamiliar_out.wsdl#wsdl.porttype(ConTipoGrupoFamiliar_out)"/>
+      </sca:reference>
+    </sca:component>
+  </sca:composite>
+  <sy:domain>
+    <sy:properties>
+      <sy:property name="CotizadorPlanes.ProviderTipoGrupoFamiliar.locationURI" value="http://testpi.osde.ar/XISOAPAdapter/MessageServlet?channel=*:PUBLIC_T:SOAPSenderTipoGrupoFamiliar"/>
+      <sy:property name="CotizadorPlanes.ProviderPlanesComercialesSocio.locationURI" value="http://testpi.osde.ar/XISOAPAdapter/MessageServlet?channel=*:PUBLIC_T:SOAPSenderPlanesComercialesSocio"/>
+      <sy:property name="jettyPort" value="8080"/>
+      <sy:property name="ESBConfiguration.jetty.contextPath" value="services"/>
+      <sy:property name="ESBConfiguration.sapPi.timeout" value="10000"/>
+      <sy:property name="ESBConfiguration.sapPi.basicAuthenticationUsername" value="piappluser"/>
+      <sy:property name="ESBConfiguration.sapPi.basicAuthenticationPassword" value="osde10sap"/>
+    </sy:properties>
+  </sy:domain>
+</sy:switchyard>

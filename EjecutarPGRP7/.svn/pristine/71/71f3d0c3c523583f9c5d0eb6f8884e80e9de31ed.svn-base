@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="EjecutarPGRP7"
+	targetNamespace="http://www.osde.com.ar/PUB/PGRP7" xmlns:p2="http://www.osde.com.ar/PUB/PGRP7/response"
+	xmlns:p1="http://www.osde.com.ar/PUB/PGRP7" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+	xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+	<wsdl:documentation />
+	<wsp:UsingPolicy wsdl:required="true" />
+	<wsp:Policy wsu:Id="OP_ConPGRP7_Out" />
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://www.osde.com.ar/PUB/PGRP7"
+			xmlns="http://www.osde.com.ar/PUB/PGRP7" xmlns:p5="http://www.osde.com.ar/canonicos/DT"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:import namespace="http://www.osde.com.ar/canonicos/DT" />
+			<xsd:complexType name="envelope">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/VersionID">3e75a33fedd611dfaa590000004308be
+					</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="header" type="p5:header" />
+					<xsd:element name="body" minOccurs="0">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="IPGRUP" type="IPGRUP" minOccurs="0" />
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="fault" type="p5:fault" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="IPGRUP">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/VersionID">3e8555a4edd611dfa83e0000004308be
+					</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="IOSOCIO" type="xsd:string"
+						minOccurs="0" />
+					<xsd:element name="FECHA" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+		<xsd:schema targetNamespace="http://www.osde.com.ar/canonicos/DT"
+			xmlns="http://www.osde.com.ar/canonicos/DT" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:complexType name="header">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/VersionID">cfb11044a55911dfad940000004308be
+					</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="message" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="fault">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/VersionID">03b52c8cb13211dfb4d20000004308be
+					</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="faultcode" type="xsd:string"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">af0679d9b11011df9cd34487fc717f72
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="faultstring" type="xsd:string"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">af0679dab11011df8e104487fc717f72
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="faultactor" type="xsd:string">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">af0679dbb11011dfbe294487fc717f72
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+		<xsd:schema targetNamespace="http://www.osde.com.ar/PUB/PGRP7/response"
+			xmlns="http://www.osde.com.ar/PUB/PGRP7/response" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:complexType name="pgrup7">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/VersionID">ec05bfd5edd911df98290000004308be
+					</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element name="datos" type="xsd:string" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+		<xsd:schema xmlns:p1="http://www.osde.com.ar/PUB/PGRP7"
+			xmlns:p13="http://www.osde.com.ar/PUB/PGRP7/response" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:import namespace="http://www.osde.com.ar/PUB/PGRP7" />
+			<xsd:import namespace="http://www.osde.com.ar/PUB/PGRP7/response" />
+			<xsd:element name="envelope" type="p1:envelope" />
+			<xsd:element name="pgrup7" type="p13:pgrup7" />
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="envelope">
+		<wsdl:documentation />
+		<wsdl:part name="envelope" element="envelope" xmlns="" />
+	</wsdl:message>
+	<wsdl:message name="p2.pgrup7">
+		<wsdl:documentation />
+		<wsdl:part name="pgrup7" element="pgrup7" xmlns="" />
+	</wsdl:message>
+	<wsdl:portType name="ConPGRP7_Out">
+		<wsdl:documentation />
+		<wsdl:operation name="ConPGRP7_Out">
+			<wsdl:documentation />
+			<wsp:Policy>
+				<wsp:PolicyReference URI="#OP_ConPGRP7_Out" />
+			</wsp:Policy>
+			<wsdl:input message="p1:envelope" />
+			<wsdl:output message="p1:p2.pgrup7" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="ConPGRP7_OutBinding" type="p1:ConPGRP7_Out">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="ConPGRP7_Out">
+			<soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="EjecutarPGRP7">
+		<wsdl:port name="ConPGRP7_OutPort" binding="p1:ConPGRP7_OutBinding">
+			<soap:address
+				location="http://testpi.osde.ar/XISOAPAdapter/MessageServlet?channel=*:PUBLIC_T:SOAPSenderEjecutarPGRP7" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

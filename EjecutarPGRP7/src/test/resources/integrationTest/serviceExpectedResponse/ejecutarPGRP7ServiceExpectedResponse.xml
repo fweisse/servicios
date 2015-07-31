@@ -1,0 +1,8 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Header/>
+   <soap:Body>
+      <pgrup7>
+         <datos>@PGRUP72</datos>
+      </pgrup7>
+   </soap:Body>
+</soap:Envelope>

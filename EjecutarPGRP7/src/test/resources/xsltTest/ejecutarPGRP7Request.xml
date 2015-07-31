@@ -1,0 +1,16 @@
+<envelope>
+	<header>
+		<message>ejecutarPGRP7</message>
+	</header>
+	<body>
+		<IPGRUP>
+			<IOSOCIO>60733881501</IOSOCIO>
+			<FECHA>20140801</FECHA>
+		</IPGRUP>
+	</body>
+	<fault>
+		<faultcode />
+		<faultstring />
+		<faultactor />
+	</fault>
+</envelope>

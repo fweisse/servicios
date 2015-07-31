@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ValidacionIdentidadService"
+	targetNamespace="http://osde.com.ar/services/atencion/validacionidentidad"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://osde.com.ar/services/atencion/validacionidentidad"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+	<wsdl:types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:tns="http://validacionidentidad.entities.osde.ar"
+			attributeFormDefault="qualified" elementFormDefault="qualified"
+			targetNamespace="http://validacionidentidad.entities.osde.ar"
+			version="1.0">
+			<xs:element name="sujeto" type="tns:sujeto" />
+			<xs:element name="sujetoActividad" type="tns:sujetoActividad" />
+			<xs:element name="sujetoContacto" type="tns:sujetoContacto" />
+			<xs:element name="tipoDeSujeto" type="tns:tipoDeSujeto" />
+			<xs:element name="validacionFilter" type="tns:validacionFilter" />
+			<xs:complexType name="validacionFilter">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="serviceName" type="tns:serviceName" />
+					<xs:element minOccurs="0" ref="tns:sujetoActividad" />
+					<xs:element minOccurs="0" ref="tns:sujetoContacto" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="sujetoActividad">
+				<xs:complexContent>
+					<xs:extension base="tns:sujeto">
+						<xs:sequence />
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="sujeto">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="nroInterlocutor" type="xs:string" />
+					<xs:element minOccurs="0" name="nroContrato" type="xs:string" />
+					<xs:element minOccurs="0" name="nroOrden" type="xs:string" />
+					<xs:element minOccurs="0" name="codigoPrestador" type="xs:string" />
+					<xs:element minOccurs="0" name="numeroDocumento" type="xs:string" />
+					<xs:element minOccurs="0" name="subjectType" type="tns:tipoDeSujeto" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="sujetoContacto">
+				<xs:complexContent>
+					<xs:extension base="tns:sujeto">
+						<xs:sequence />
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:simpleType name="serviceName">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="CORRESPONDENCIA" />
+					<xs:enumeration value="REFINANCIACION" />
+					<xs:enumeration value="BAJA_SOCIO" />
+					<xs:enumeration value="CAMBIO_PLAN" />
+					<xs:enumeration value="ALTA_DEBITO_AUTOMATICO" />
+					<xs:enumeration value="BAJA_DEBITO_AUTOMATICO" />
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="tipoDeSujeto">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="SOCIO" />
+					<xs:enumeration value="EMPRESA" />
+					<xs:enumeration value="NOSOCIO" />
+					<xs:enumeration value="PRESTADOR" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:ns1="http://validacionidentidad.entities.osde.ar" xmlns:tns="http://osde.com.ar/services/atencion/validacionidentidad"
+			attributeFormDefault="unqualified" elementFormDefault="unqualified"
+			targetNamespace="http://osde.com.ar/services/atencion/validacionidentidad">
+			<xs:import namespace="http://validacionidentidad.entities.osde.ar" />
+			<xs:element name="caractCertDiscapacidadValidacionIdentidad"
+				type="tns:caractCertDiscapacidadValidacionIdentidad" />
+			<xs:element name="contratoValidacionIdentidad" type="tns:contratoValidacionIdentidad" />
+			<xs:element name="convenioComplementacion" type="tns:convenioComplementacion" />
+			<xs:element name="decisionType" type="tns:decisionType" />
+			<xs:element name="documentoValidacionIdentidad" type="tns:documentoValidacionIdentidad" />
+			<xs:element name="domicilioValidacionIdentidad" type="tns:domicilioValidacionIdentidad" />
+			<xs:element name="empresa" type="tns:empresa" />
+			<xs:element name="integranteValidacionIdentidad" type="tns:integranteValidacionIdentidad" />
+			<xs:element name="interlocutorValidacionIdentidad" type="tns:interlocutorValidacionIdentidad" />
+			<xs:element name="obraSocial" type="tns:obraSocial" />
+			<xs:element name="responsablePagoValidacionIdentidad"
+				type="tns:responsablePagoValidacionIdentidad" />
+			<xs:element name="servicioInhabilitado" type="tns:servicioInhabilitado" />
+			<xs:element name="sujetoValidacionIdentidad" type="tns:sujetoValidacionIdentidad" />
+			<xs:element name="tipoSujeto" type="tns:tipoSujeto" />
+			<xs:element name="validacionDeIdentidad" type="tns:validacionDeIdentidad" />
+			<xs:element name="validar" type="tns:validar" />
+			<xs:element name="validarResponse" type="tns:validarResponse" />
+			<xs:element name="variableNegocio" type="tns:variableNegocio" />
+			<xs:complexType name="validar">
+				<xs:sequence>
+					<xs:element minOccurs="0" ref="ns1:validacionFilter" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="validarResponse">
+				<xs:sequence>
+					<xs:element minOccurs="0" ref="tns:decisionType" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="decisionType">
+				<xs:sequence>
+					<xs:element name="access" type="xs:boolean" />
+					<xs:element minOccurs="0" name="validacionDeIdentidad"
+						type="tns:validacionDeIdentidad" />
+					<xs:element minOccurs="0" name="reglaEjecutada" type="xs:string" />
+					<xs:element minOccurs="0" name="cuestionarioAUtilizar"
+						type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="validacionDeIdentidad">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="servicio" type="xs:string" />
+					<xs:element minOccurs="0"
+						name="relacionSujetoContactoSujetoActividad" type="xs:string" />
+					<xs:element minOccurs="0" name="tipoValidacion" type="xs:string" />
+					<xs:element minOccurs="0" name="sujetoContacto" type="xs:string" />
+					<xs:element minOccurs="0" name="sujetoActividad" type="xs:string" />
+					<xs:element minOccurs="0" name="asesor" type="xs:string" />
+					<xs:element minOccurs="0" name="motivo" type="xs:string" />
+					<xs:element minOccurs="0" name="nroInterlocutorSujetoContacto"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="nroInterlocutorSujetoActividad"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+					<xs:element minOccurs="0"
+						name="sujetoValidacionIdentidadContacto" type="tns:sujetoValidacionIdentidad" />
+					<xs:element minOccurs="0"
+						name="sujetoValidacionIdentidadActividad" type="tns:sujetoValidacionIdentidad" />
+					<xs:element minOccurs="0" name="usuarioIntranet" type="xs:string" />
+					<xs:element minOccurs="0" name="observaciones" type="xs:string" />
+					<xs:element minOccurs="0" name="servicioID" type="xs:string" />
+					<xs:element minOccurs="0" name="tipoSujetoActividad"
+						type="tns:tipoSujeto" />
+					<xs:element minOccurs="0" name="tipoSujetoContacto"
+						type="tns:tipoSujeto" />
+					<xs:element minOccurs="0" name="empresa" type="tns:empresa" />
+					<xs:element minOccurs="0" name="numeroGestionWEB" type="xs:string" />
+					<xs:element minOccurs="0" name="numeroTramiteGSC" type="xs:string" />
+					<xs:element minOccurs="0" name="numeroTramiteFax" type="xs:string" />
+					<xs:element minOccurs="0" name="numeroSobre" type="xs:string" />
+					<xs:element minOccurs="0" name="ucid" type="xs:string" />
+					<xs:element minOccurs="0" name="dnis" type="xs:string" />
+					<xs:element minOccurs="0" name="ani" type="xs:string" />
+					<xs:element
+						name="sujetoDeContactoDentroDeGrupoFamiliarDeSujetoDeActividad"
+						type="xs:boolean" />
+					<xs:element
+						name="sujetoDeContactoEstuvoDentroDeGrupoFamiliarDeSujetoDeActividad"
+						type="xs:boolean" />
+					<xs:element minOccurs="0" name="nombreResponsableEmpresa"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="apellidoResponsableEmpresa"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="documentoResponsableEmpresa"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="idFormaDeContacto" type="xs:long" />
+					<xs:element minOccurs="0" name="nroContactoRecepcion"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="rolEnGrupoFamiliar"
+						type="xs:string" />
+					<xs:element minOccurs="0"
+						name="rolEnGrupoFamiliarSujetoActividad" type="xs:string" />
+					<xs:element minOccurs="0" name="nombreServicioKeyParaSpeech"
+						type="xs:string" />
+					<xs:element name="utilizarLinkABiblos" type="xs:boolean" />
+					<xs:element name="mostrarSpeechParaServicio" type="xs:boolean" />
+					<xs:element minOccurs="0" name="speechAclaracionServicio"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="nombreServicioForSpeech"
+						type="xs:string" />
+					<xs:element name="sujetoContactoIgualSujetoActividad"
+						type="xs:boolean" />
+					<xs:element name="mostrarVariableComplementacion" type="xs:boolean" />
+					<xs:element name="mostrarFilialServicio" type="xs:boolean" />
+					<xs:element name="mostrarObraSocialComplementacion"
+						type="xs:boolean" />
+					<xs:element minOccurs="0" name="keyVariableComplementacion"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="keyParaTituloRestringido"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="keySpeechCuestionario"
+						type="xs:string" />
+					<xs:element name="esCap" type="xs:boolean" />
+					<xs:element name="speechInformativo" type="xs:boolean" />
+					<xs:element minOccurs="0" name="nombreTablaDecision"
+						type="xs:string" />
+					<xs:element name="mostrarPrimero" type="xs:boolean" />
+					<xs:element name="mostrarObservacionesYBotonRestringido"
+						type="xs:boolean" />
+					<xs:element name="saltearPantallaCAP" type="xs:boolean" />
+					<xs:element minOccurs="0" name="nombreCuestionario"
+						type="xs:string" />
+					<xs:element name="servicioSinCuestionario" type="xs:boolean" />
+					<xs:element name="mostrarBotonUsoInterno" type="xs:boolean" />
+					<xs:element name="mostrarBotonGestion" type="xs:boolean" />
+					<xs:element name="intercambiarSCySA" type="xs:boolean" />
+					<xs:element name="guardarEnSesionValidacionExitosa"
+						type="xs:boolean" />
+					<xs:element name="usaCuestionarioAlternativo" type="xs:boolean" />
+					<xs:element name="empresaGrupoDirectoPuro" type="xs:boolean" />
+					<xs:element name="mostrarBotonGestionEnBaja" type="xs:boolean" />
+					<xs:element minOccurs="0" name="cuestionarioUtilizado"
+						type="xs:string" />
+					<xs:element name="mostrarAclaracionSobreCredencial"
+						type="xs:boolean" />
+					<xs:element minOccurs="0" name="aclaracionCuestionario"
+						type="xs:string" />
+					<xs:element name="accesoPermitido" type="xs:boolean" />
+					<xs:element name="mostrarBotonGestionPresencial" type="xs:boolean" />
+					<xs:element name="mostrarInputsRestringidoCAP" type="xs:boolean" />
+					<xs:element name="mostrarInputsRestringidoCAT" type="xs:boolean" />
+					<xs:element name="mostrarGestorAsignado" type="xs:boolean" />
+					<xs:element name="cambiarFormaDeContactoASaliente" type="xs:boolean" />
+					<xs:element name="fromDatanet" type="xs:boolean" />
+					<xs:element minOccurs="0" name="datanetTitle" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="sujetoValidacionIdentidad">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="interlocutor"
+						type="tns:interlocutorValidacionIdentidad" />
+					<xs:element minOccurs="0" name="contrato"
+						type="tns:contratoValidacionIdentidad" />
+					<xs:element minOccurs="0" name="listContratos">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element maxOccurs="unbounded" minOccurs="0"
+									name="contratoValidacionIdentidad" type="tns:contratoValidacionIdentidad" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element minOccurs="0" name="documentos">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element maxOccurs="unbounded" minOccurs="0"
+									name="documentoValidacionIdentidad" type="tns:documentoValidacionIdentidad" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element minOccurs="0" name="integrantesGrupoFamiliar">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element maxOccurs="unbounded" minOccurs="0"
+									name="integranteValidacionIdentidad" type="tns:integranteValidacionIdentidad" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element minOccurs="0" name="obraSocial" type="tns:obraSocial" />
+					<xs:element minOccurs="0" name="nroInterlocutorEmpresa"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="nombreCompleto" type="xs:string" />
+					<xs:element minOccurs="0" name="fechaAltaEmpresa" type="xs:string" />
+					<xs:element minOccurs="0" name="fechaBaja" type="xs:string" />
+					<xs:element minOccurs="0" name="razonSocial2" type="xs:string" />
+					<xs:element minOccurs="0" name="unidadFacturacion" type="xs:string" />
+					<xs:element minOccurs="0" name="tipoEmpresa" type="xs:string" />
+					<xs:element minOccurs="0" name="motivoBajaCodigo" type="xs:string" />
+					<xs:element minOccurs="0" name="motivoBajaDsc" type="xs:string" />
+					<xs:element minOccurs="0" name="filialGestion" type="xs:string" />
+					<xs:element minOccurs="0" name="icGestor" type="xs:string" />
+					<xs:element minOccurs="0" name="nombreGestor" type="xs:string" />
+					<xs:element minOccurs="0" name="sector" type="xs:string" />
+					<xs:element minOccurs="0" name="sectorGestion" type="xs:string" />
+					<xs:element minOccurs="0" name="estadoUf" type="xs:string" />
+					<xs:element minOccurs="0" name="estadoUfDsc" type="xs:string" />
+					<xs:element minOccurs="0" name="condicionIva" type="xs:string" />
+					<xs:element minOccurs="0" name="condicionIvaDsc" type="xs:string" />
+					<xs:element minOccurs="0" name="cantidadTitulares" type="xs:string" />
+					<xs:element minOccurs="0" name="cantidadIc" type="xs:string" />
+					<xs:element minOccurs="0" name="filialGestionDsc" type="xs:string" />
+					<xs:element minOccurs="0" name="marcaGestorPermanente"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="marcaGestorAsignado"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="categoriaConper" type="xs:string" />
+					<xs:element minOccurs="0" name="categoriaConperDsc"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="convenioComplementacion"
+						type="tns:convenioComplementacion" />
+					<xs:element name="poseeSubsidioPorDesempleo" type="xs:boolean" />
+					<xs:element name="anteriorModoContratacionHastaPlan"
+						type="xs:boolean" />
+					<xs:element name="anteriorModoContratacionSoloApo" type="xs:boolean" />
+					<xs:element minOccurs="0" name="fechaAltaNoSocio" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="idNoSocio" type="xs:long" />
+					<xs:element minOccurs="0" name="ic" type="xs:string" />
+					<xs:element name="bajaLogica" type="xs:boolean" />
+					<xs:element minOccurs="0" name="fechaBajaLogica" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="email1" type="xs:string" />
+					<xs:element minOccurs="0" name="email2" type="xs:string" />
+					<xs:element minOccurs="0" name="sistemaOrigen" type="xs:string" />
+					<xs:element minOccurs="0" name="telefonoParticular"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="telefonoLaboral" type="xs:string" />
+					<xs:element minOccurs="0" name="telefonoAlternativo"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="flagSocio" type="xs:string" />
+					<xs:element minOccurs="0" name="filial" type="xs:string" />
+					<xs:element minOccurs="0" name="codigo" type="xs:string" />
+					<xs:element minOccurs="0" name="fechaAltaPrestador"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="domicilio" type="xs:string" />
+					<xs:element minOccurs="0" name="edad" type="xs:int" />
+					<xs:element name="sujetoComplementacion" type="xs:boolean" />
+					<xs:element name="marcaPreexistencia" type="xs:boolean" />
+					<xs:element name="porDescenso" type="xs:boolean" />
+					<xs:element name="porDescensoMenorA30Dias" type="xs:boolean" />
+					<xs:element name="vigenciaMenorA90Dias" type="xs:boolean" />
+					<xs:element name="altaAutomatica" type="xs:boolean" />
+					<xs:element name="consumio" type="xs:boolean" />
+					<xs:element minOccurs="0" name="tipoSujetoValidacionIdentidad"
+						type="xs:string" />
+					<xs:element name="poseeSumatoriaDeAporte" type="xs:boolean" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="interlocutorValidacionIdentidad">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="nombre" type="xs:string" />
+					<xs:element minOccurs="0" name="apellido" type="xs:string" />
+					<xs:element minOccurs="0" name="nroInterlocutor" type="xs:string" />
+					<xs:element minOccurs="0" name="documento"
+						type="tns:documentoValidacionIdentidad" />
+					<xs:element minOccurs="0" name="nroContrato" type="xs:string" />
+					<xs:element minOccurs="0" name="nroOrden" type="xs:string" />
+					<xs:element minOccurs="0" name="sexo" type="xs:string" />
+					<xs:element minOccurs="0" name="fechaNacimiento" type="xs:string" />
+					<xs:element minOccurs="0" name="edad" type="xs:string" />
+					<xs:element minOccurs="0" name="domicilio"
+						type="tns:domicilioValidacionIdentidad" />
+					<xs:element minOccurs="0" name="multiproducto" type="xs:string" />
+					<xs:element minOccurs="0" name="marcaDiscapacitado"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="ambitoVisibilidad" type="xs:string" />
+					<xs:element minOccurs="0" name="discPermanente" type="xs:string" />
+					<xs:element minOccurs="0" name="marcaDiscapacidadFacturacion"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="discapacidad"
+						type="tns:caractCertDiscapacidadValidacionIdentidad" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="documentoValidacionIdentidad">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="tipo" type="xs:string" />
+					<xs:element minOccurs="0" name="numero" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="domicilioValidacionIdentidad">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="calle" type="xs:string" />
+					<xs:element minOccurs="0" name="numero" type="xs:string" />
+					<xs:element minOccurs="0" name="piso" type="xs:string" />
+					<xs:element minOccurs="0" name="depto" type="xs:string" />
+					<xs:element minOccurs="0" name="localidad" type="xs:string" />
+					<xs:element minOccurs="0" name="provinciaCodigo" type="xs:string" />
+					<xs:element minOccurs="0" name="provinciaDesc" type="xs:string" />
+					<xs:element minOccurs="0" name="pais" type="xs:string" />
+					<xs:element minOccurs="0" name="codigoPostal" type="xs:string" />
+					<xs:element minOccurs="0" name="tipoDomicilioCodigo"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="tipoDomicilioDsc" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="caractCertDiscapacidadValidacionIdentidad">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="fechaVigenciaDesde"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="fechaVigenciaHasta"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="marcaAvalaAcompanante"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="marcaCertificadoPresentado"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="ambitoVisibilidad" type="xs:string" />
+					<xs:element minOccurs="0" name="discPermanente" type="xs:string" />
+					<xs:element minOccurs="0" name="nombreApellidoContacto"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="telefonoContacto" type="xs:string" />
+					<xs:element minOccurs="0" name="relacionFamiliarContacto"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="observacion" type="xs:string" />
+					<xs:element minOccurs="0" name="fechaBaja" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="contratoValidacionIdentidad">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="nroContrato" type="xs:string" />
+					<xs:element minOccurs="0" name="nroOrden" type="xs:string" />
+					<xs:element minOccurs="0" name="tipoSocio" type="xs:string" />
+					<xs:element minOccurs="0" name="fechaAlta" type="xs:string" />
+					<xs:element minOccurs="0" name="fechaBaja" type="xs:string" />
+					<xs:element minOccurs="0" name="responsablePago"
+						type="tns:responsablePagoValidacionIdentidad" />
+					<xs:element minOccurs="0" name="filialServicioId" type="xs:string" />
+					<xs:element minOccurs="0" name="filialServicio" type="xs:string" />
+					<xs:element minOccurs="0" name="filialGestionId" type="xs:string" />
+					<xs:element minOccurs="0" name="filialGestion" type="xs:string" />
+					<xs:element minOccurs="0" name="motivoBaja" type="xs:string" />
+					<xs:element minOccurs="0" name="mesesRec" type="xs:string" />
+					<xs:element minOccurs="0" name="plan" type="xs:string" />
+					<xs:element minOccurs="0" name="flagPrestador" type="xs:string" />
+					<xs:element minOccurs="0" name="mail" type="xs:string" />
+					<xs:element minOccurs="0" name="flagAutRyA" type="xs:string" />
+					<xs:element minOccurs="0" name="flagAutPos" type="xs:string" />
+					<xs:element minOccurs="0" name="flagManRyA" type="xs:string" />
+					<xs:element minOccurs="0" name="fechaFlagRyA" type="xs:string" />
+					<xs:element minOccurs="0" name="flagManPos" type="xs:string" />
+					<xs:element minOccurs="0" name="fechaManPos" type="xs:string" />
+					<xs:element minOccurs="0" name="deuda" type="xs:string" />
+					<xs:element minOccurs="0" name="gestor" type="xs:string" />
+					<xs:element minOccurs="0" name="versionCredencial" type="xs:string" />
+					<xs:element minOccurs="0" name="vencimientoCredencial"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="rotuloIVA" type="xs:string" />
+					<xs:element minOccurs="0" name="icPromotor" type="xs:string" />
+					<xs:element minOccurs="0" name="aynPromotor" type="xs:string" />
+					<xs:element minOccurs="0" name="sector" type="xs:string" />
+					<xs:element minOccurs="0" name="sectorDsc" type="xs:string" />
+					<xs:element minOccurs="0" name="marcaGestorPermanente"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="marcaGestorAsignado"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="fechaVigenciaPlan" type="xs:string" />
+					<xs:element minOccurs="0"
+						name="socioDirectoObraSocialComplementacion" type="xs:string" />
+					<xs:element minOccurs="0" name="tipoSocioCompleto" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="responsablePagoValidacionIdentidad">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="razonSocial" type="xs:string" />
+					<xs:element minOccurs="0" name="nroInterlocutor" type="xs:string" />
+					<xs:element minOccurs="0" name="modoContratacion" type="xs:string" />
+					<xs:element minOccurs="0" name="nroContrato" type="xs:string" />
+					<xs:element minOccurs="0" name="codigoObraSocial" type="xs:string" />
+					<xs:element minOccurs="0" name="descripcionObraSocial"
+						type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="integranteValidacionIdentidad">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="nroOrden" type="xs:string" />
+					<xs:element minOccurs="0" name="apellido" type="xs:string" />
+					<xs:element minOccurs="0" name="nombre" type="xs:string" />
+					<xs:element minOccurs="0" name="relacionFamiliarId"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="relacionFamiliar" type="xs:string" />
+					<xs:element minOccurs="0" name="fechaAlta" type="xs:string" />
+					<xs:element minOccurs="0" name="fechaBaja" type="xs:string" />
+					<xs:element minOccurs="0" name="tipoDocumento" type="xs:string" />
+					<xs:element minOccurs="0" name="nroDocumento" type="xs:string" />
+					<xs:element minOccurs="0" name="nroInterlocutor" type="xs:string" />
+					<xs:element minOccurs="0" name="fechaNacimiento" type="xs:string" />
+					<xs:element minOccurs="0" name="edad" type="xs:string" />
+					<xs:element minOccurs="0" name="fechaVencimientoCredencial"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="verCredencial" type="xs:string" />
+					<xs:element minOccurs="0" name="listDocumentos">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element maxOccurs="unbounded" minOccurs="0"
+									name="documentoValidacionIdentidad" type="tns:documentoValidacionIdentidad" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element minOccurs="0" name="marcaDescuento" type="xs:string" />
+					<xs:element minOccurs="0" name="fechaHastaMarcaDescuento"
+						type="xs:string" />
+					<xs:element name="seleccionado" type="xs:boolean" />
+					<xs:element minOccurs="0" name="serviciosInhabilitados">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element maxOccurs="unbounded" minOccurs="0"
+									name="servicioInhabilitado" type="tns:servicioInhabilitado" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="bajaFuturo" type="xs:boolean" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="servicioInhabilitado">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="serviceName" type="xs:string" />
+					<xs:element minOccurs="0" name="serviceId" type="xs:string" />
+					<xs:element name="validacionIdentidad" type="xs:boolean" />
+					<xs:element name="seleccionado" type="xs:boolean" />
+					<xs:element minOccurs="0" name="destinatariosDeInhabilitaciones">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element maxOccurs="unbounded" minOccurs="0"
+									name="integranteValidacionIdentidad" type="tns:integranteValidacionIdentidad" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="obraSocial">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="codigo" type="xs:string" />
+					<xs:element minOccurs="0" name="tipo" type="xs:string" />
+					<xs:element minOccurs="0" name="descripcion" type="xs:string" />
+					<xs:element minOccurs="0" name="descTipo" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="convenioComplementacion">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="codigo" type="xs:string" />
+					<xs:element minOccurs="0" name="descripcion" type="xs:string" />
+					<xs:element minOccurs="0" name="nombre" type="xs:string" />
+					<xs:element minOccurs="0" name="tipoSocio" type="xs:string" />
+					<xs:element minOccurs="0" name="unidadFacturacion" type="xs:string" />
+					<xs:element minOccurs="0" name="variablesDeNegocio">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element maxOccurs="unbounded" minOccurs="0"
+									name="variableDeNegocio" type="tns:variableNegocio" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="variableNegocio">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="clasificacion" type="xs:string" />
+					<xs:element minOccurs="0" name="nombre" type="xs:string" />
+					<xs:element minOccurs="0" name="valor" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="tipoSujeto">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="id" type="xs:long" />
+					<xs:element minOccurs="0" name="description" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="empresa">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="id" type="xs:long" />
+					<xs:element minOccurs="0" name="cuit" type="xs:long" />
+					<xs:element minOccurs="0" name="description" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="ServiceException" type="tns:ServiceException" />
+			<xs:complexType name="ServiceException">
+				<xs:sequence />
+			</xs:complexType>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="validarResponse">
+		<wsdl:part name="parameters" element="tns:validarResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="ServiceException">
+		<wsdl:part name="ServiceException" element="tns:ServiceException">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="validar">
+		<wsdl:part name="parameters" element="tns:validar">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="ValidacionIdentidad">
+		<wsdl:operation name="validar">
+			<wsdl:input name="validar" message="tns:validar">
+			</wsdl:input>
+			<wsdl:output name="validarResponse" message="tns:validarResponse">
+			</wsdl:output>
+			<wsdl:fault name="ServiceException" message="tns:ServiceException">
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="ValidacionIdentidadServiceSoapBinding"
+		type="tns:ValidacionIdentidad">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="validar">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="validar">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="validarResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="ServiceException">
+				<soap:fault name="ServiceException" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="ValidacionIdentidadService">
+		<wsdl:port name="ValidacionIdentidadPort" binding="tns:ValidacionIdentidadServiceSoapBinding">
+			<soap:address location="http://localhost:9090/ValidacionIdentidadPort" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

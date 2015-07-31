@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ConCtasDatanet_Out"
+	targetNamespace="http://www.osde.com.ar/PUB/Ctas_Datanet" xmlns:p2="http://www.osde.com.ar/PUB/Ctas_Datanet/response"
+	xmlns:p1="http://www.osde.com.ar/PUB/Ctas_Datanet" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+	xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+	<wsdl:documentation />
+
+	<wsp:UsingPolicy wsdl:required="true" />
+
+	<wsp:Policy wsu:Id="OP_ConCtasDatanet_Out" />
+
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://www.osde.com.ar/PUB/Ctas_Datanet/response"
+			xmlns="http://www.osde.com.ar/PUB/Ctas_Datanet/response" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element name="CtasDatanet_resp" type="CtasDatanet_resp" />
+
+			<xsd:complexType name="CtasDatanet_resp">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/VersionID">19a193763b9111e1cfa200000067d252
+					</xsd:appinfo>
+				</xsd:annotation>
+
+				<xsd:sequence>
+					<xsd:element name="E_CUENTA_DATANET" minOccurs="0"
+						maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">141e5361176411e0ba034487fc718183
+							</xsd:appinfo>
+						</xsd:annotation>
+
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="CONTRATO_SOCIO" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e5353176411e09bfb4487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="PARTNER" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e5354176411e0bffb4487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="ORDEN" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e5355176411e08ac84487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="CLAVE_BANCO" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e5356176411e0a03a4487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="NOMBRE_BANCO" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e5357176411e0af7e4487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="CODIGO_SUCURSAL" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e5358176411e0a9364487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="NOMBRE_SUCURSAL" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e5359176411e089794487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="CUENTA_BANCARIA" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e535a176411e0c4dc4487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="TIPO_CUENTA_BANK" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e535b176411e0a7904487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="DESC_TIPO_CUENTA" type="xsd:string"
+									minOccurs="0" />
+
+								<xsd:element name="CBU" type="xsd:string" minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e535c176411e083ba4487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="TITULAR_CUENTA" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e535d176411e0b6b54487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="REL_BANCARIA" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e535e176411e098c14487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="ESTADO_CUENTA" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e535f176411e0c7144487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="DESCRIPCION" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">489af535607d11e08f544487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="REINTEGRO" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e5360176411e08cde4487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="FECHA" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">93232c0f3b9011e1b72650e54927895f
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+
+					<xsd:element name="E_RETURN" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">141e5370176411e0a8b24487fc718183
+							</xsd:appinfo>
+						</xsd:annotation>
+
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="TYPE" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e5362176411e08bd64487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="ID" type="xsd:string" minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e5363176411e0aca04487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="NUMBER" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e5364176411e0a5c64487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="MESSAGE" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e5365176411e0c62a4487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="LOG_NO" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e5366176411e0bd8e4487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="LOG_MSG_NO" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e5367176411e09bf04487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="MESSAGE_V1" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e5368176411e0cc984487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="MESSAGE_V2" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e5369176411e0816d4487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="MESSAGE_V3" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e536a176411e0b2354487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="MESSAGE_V4" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e536b176411e0c4964487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="PARAMETER" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e536c176411e090504487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="ROW" type="xsd:string" minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e536d176411e09e084487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="FIELD" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e536e176411e0a97f4487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+
+								<xsd:element name="SYSTEM" type="xsd:string"
+									minOccurs="0">
+									<xsd:annotation>
+										<xsd:appinfo source="http://sap.com/xi/TextID">141e536f176411e09e6f4487fc718183
+										</xsd:appinfo>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+
+		<xsd:schema targetNamespace="http://www.osde.com.ar/PUB/Ctas_Datanet"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.osde.com.ar/PUB/Ctas_Datanet">
+			<xsd:element name="CtasDatanet_req" type="CtasDatanet_req" />
+
+			<xsd:complexType name="CtasDatanet_req">
+				<xsd:annotation>
+					<xsd:appinfo source="http://sap.com/xi/VersionID">6412b13f177311e0cea900000067d252
+					</xsd:appinfo>
+				</xsd:annotation>
+
+				<xsd:sequence>
+					<xsd:element name="I_CONTRATO" type="xsd:string"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">bf4998b2177311e084bf4487fc718183
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+
+					<xsd:element name="I_ORDEN" type="xsd:string"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">bf4998b3177311e0c5d14487fc718183
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+
+					<xsd:element name="I_FECHA" type="xsd:string"
+						minOccurs="0">
+						<xsd:annotation>
+							<xsd:appinfo source="http://sap.com/xi/TextID">bf4998b4177311e0c73d4487fc718183
+							</xsd:appinfo>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="CtasDatanet_req">
+		<wsdl:documentation />
+
+		<wsdl:part name="CtasDatanet_req" element="p1:CtasDatanet_req" />
+	</wsdl:message>
+
+	<wsdl:message name="p2.CtasDatanet_resp">
+		<wsdl:documentation />
+
+		<wsdl:part name="CtasDatanet_resp" element="p2:CtasDatanet_resp" />
+	</wsdl:message>
+
+	<wsdl:portType name="ConCtasDatanet_Out">
+		<wsdl:documentation />
+
+		<wsdl:operation name="ConCtasDatanet_Out">
+			<wsdl:documentation />
+
+			<wsp:Policy>
+				<wsp:PolicyReference URI="#OP_ConCtasDatanet_Out" />
+			</wsp:Policy>
+
+			<wsdl:input message="p1:CtasDatanet_req" />
+
+			<wsdl:output message="p1:p2.CtasDatanet_resp" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="ConCtasDatanet_OutBinding" type="p1:ConCtasDatanet_Out">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+
+		<wsdl:operation name="ConCtasDatanet_Out">
+			<soap:operation soapAction="http://sap.com/xi/WebService/soap1.1"
+				xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+
+			<wsdl:input>
+				<soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+			</wsdl:input>
+
+			<wsdl:output>
+				<soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="ConCtasDatanet_OutService">
+		<wsdl:port name="ConCtasDatanet_OutPort" binding="p1:ConCtasDatanet_OutBinding">
+			<soap:address
+				location="http://localhost:8088/mockConCtasDatanet_OutBinding"
+				xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
+

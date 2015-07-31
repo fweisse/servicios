@@ -1,0 +1,7 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:cot="http://osde.com.ar/services/CotizadorPlanes">
+	<soapenv:Header />
+	<soapenv:Body>
+		<cot:getEsquemaFamiliar />
+	</soapenv:Body>
+</soapenv:Envelope>

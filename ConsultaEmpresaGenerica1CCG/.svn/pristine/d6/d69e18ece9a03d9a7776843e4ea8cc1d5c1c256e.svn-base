@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sy:switchyard xmlns:camel="urn:switchyard-component-camel:config:1.1" xmlns:http="urn:switchyard-component-http:config:1.1" xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912" xmlns:soap="urn:switchyard-component-soap:config:1.1" xmlns:sy="urn:switchyard-config:switchyard:1.1" name="ConsultaEmpresaGenerica1CCG" targetNamespace="urn:ar.com.osde.fsw:ConsultaEmpresaGenerica1CCG:1.0">
+  <sca:composite name="ConsultaEmpresaGenerica1CCG" targetNamespace="urn:ar.com.osde.fsw:ConsultaEmpresaGenerica1CCG:1.0">
+    <sca:service name="ConsultaEmpresaGenerica1CCG" promote="ConsultaEmpresaGenerica1CCGComponent/ConsultaEmpresaGenerica1CCG">
+      <sca:interface.wsdl interface="META-INF/wsdl/ConEmpresasGenerica1Out.wsdl#wsdl.porttype(ConEmpresasGenerica1_Out)"/>
+      <soap:binding.soap name="ConsultaEmpresaGenerica1CCG">
+        <soap:wsdl>META-INF/wsdl/ConEmpresasGenerica1Out.wsdl</soap:wsdl>
+        <soap:wsdlPort>ConEmpresasGenerica1_OutPort</soap:wsdlPort>
+        <soap:socketAddr>:${jettyPort}</soap:socketAddr>
+        <soap:contextPath>ConsultaEmpresaGenerica1CCG</soap:contextPath>
+      </soap:binding.soap>
+      <sca:extensions>
+        <sy:throttling maxRequests="50000"/>
+      </sca:extensions>
+    </sca:service>
+    <sca:reference name="ConsultaEmpresaGenerica1CCGProvider" multiplicity="0..1" promote="ConsultaEmpresaGenerica1CCGComponent/ConsultaEmpresaGenerica1CCGProvider">
+      <sca:interface.wsdl interface="META-INF/wsdl/ConEmpresasGenerica1Out.wsdl#wsdl.porttype(ConEmpresasGenerica1_Out)"/>
+      <soap:binding.soap name="ConsultaEmpresaGenerica1CCG">
+        <soap:wsdl>META-INF/wsdl/ConEmpresasGenerica1Out.wsdl</soap:wsdl>
+        <soap:wsdlPort>ConEmpresasGenerica1_OutPort</soap:wsdlPort>
+        <soap:endpointAddress>${ConsultaEmpresaGenerica1CCG.ProviderConsultaEmpresaGenerica1CCG.locationURI}</soap:endpointAddress>
+        <soap:timeout>${ESBConfiguration.sapPi.timeout}</soap:timeout>
+        <soap:basic>
+          <soap:user>${ESBConfiguration.sapPi.basicAuthenticationUsername}</soap:user>
+          <soap:password>${ESBConfiguration.sapPi.basicAuthenticationPassword}</soap:password>
+        </soap:basic>
+      </soap:binding.soap>
+    </sca:reference>
+    <sca:component name="ConsultaEmpresaGenerica1CCGComponent">
+      <camel:implementation.camel>
+        <camel:java class="ar.com.osde.fsw.ConsultaEmpresaGenerica1CCG.ConsultaEmpresaGenerica1CCGRouterBuilder"/>
+      </camel:implementation.camel>
+      <sca:service name="ConsultaEmpresaGenerica1CCG">
+        <sca:interface.wsdl interface="META-INF/wsdl/ConEmpresasGenerica1Out.wsdl#wsdl.porttype(ConEmpresasGenerica1_Out)"/>
+      </sca:service>
+      <sca:reference name="ConsultaEmpresaGenerica1CCGProvider">
+        <sca:interface.wsdl interface="META-INF/wsdl/ConEmpresasGenerica1Out.wsdl#wsdl.porttype(ConEmpresasGenerica1_Out)"/>
+      </sca:reference>
+    </sca:component>
+  </sca:composite>
+  <sy:domain>
+    <sy:properties>
+      <sy:property name="ConsultaEmpresaGenerica1CCG.ProviderConsultaEmpresaGenerica1CCG.locationURI" value="http://localhost:8970/mockConEmpresasGenerica1_OutBinding"/>
+      <sy:property name="jettyPort" value="8080"/>
+      <sy:property name="ESBConfiguration.sapPi.timeout" value="10000"/>
+      <sy:property name="ESBConfiguration.sapPi.basicAuthenticationUsername" value="piappluser"/>
+      <sy:property name="ESBConfiguration.sapPi.basicAuthenticationPassword" value="osde10sap"/>
+      <sy:property name="org.switchyard.handlers.messageTrace.enabled" value="false"/>
+    </sy:properties>
+  </sy:domain>
+</sy:switchyard>

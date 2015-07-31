@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="CuentaDataNetServiceService"
+	targetNamespace="http://osde.com.ar/services/cuentadatanetservice"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://osde.com.ar/services/cuentadatanetservice"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+	<wsdl:types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:tns="http://cuentaDataNet.socio.entities.osde.com.ar"
+			attributeFormDefault="qualified" elementFormDefault="qualified"
+			targetNamespace="http://cuentaDataNet.socio.entities.osde.com.ar">
+			<xs:complexType name="cuentasDataNetFilter">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="nroContrato" type="xs:string" />
+					<xs:element minOccurs="0" name="nroOrden" type="xs:string" />
+					<xs:element minOccurs="0" name="order" type="xs:string" />
+					<xs:element name="pageNumber" type="xs:int" />
+					<xs:element name="pageSize" type="xs:int" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="cuentaDataNet">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="banco" type="tns:banco" />
+					<xs:element minOccurs="0" name="cbu" type="xs:string" />
+					<xs:element minOccurs="0" name="contratoBid" type="tns:contratoBid" />
+					<xs:element minOccurs="0" name="cuenta" type="tns:cuentaBancaria" />
+					<xs:element minOccurs="0" name="estado" type="tns:estadoCuentaDataNet" />
+					<xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="fechaActivacion" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="interlocutorComercial"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="marcaCuentaReintegro"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="nombreTitularCuenta"
+						type="xs:string" />
+					<xs:element minOccurs="0" name="nroOrden" type="xs:string" />
+					<xs:element minOccurs="0" name="relacionBancaria" type="xs:string" />
+					<xs:element minOccurs="0" name="tipoCuenta" type="tns:tipoCuenta" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="banco">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="codigo" type="xs:string" />
+					<xs:element minOccurs="0" name="nombre" type="xs:string" />
+					<xs:element minOccurs="0" name="sucursal" type="tns:sucursal" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="sucursal">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="codigo" type="xs:string" />
+					<xs:element minOccurs="0" name="descripcion" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="contratoBid">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="nroContrato" type="xs:string" />
+					<xs:element minOccurs="0" name="secuencia" type="xs:string" />
+					<xs:element minOccurs="0" name="tipoContrato" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="cuentaBancaria">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="numero" type="xs:string" />
+					<xs:element minOccurs="0" name="tipo" type="tns:tipoCuentaBancaria" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="tipoCuentaBancaria">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="codigo" type="xs:string" />
+					<xs:element minOccurs="0" name="descripcion" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="estadoCuentaDataNet">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="codigo" type="xs:string" />
+					<xs:element minOccurs="0" name="descripcion" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="tipoCuenta">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="codigo" type="xs:string" />
+					<xs:element minOccurs="0" name="descripcion" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:ns1="http://cuentaDataNet.socio.entities.osde.com.ar"
+			xmlns:tns="http://osde.com.ar/services/cuentadatanetservice"
+			attributeFormDefault="unqualified" elementFormDefault="unqualified"
+			targetNamespace="http://osde.com.ar/services/cuentadatanetservice">
+			<xs:import namespace="http://cuentaDataNet.socio.entities.osde.com.ar" />
+			<xs:element name="searchCuentasDataNet" type="tns:searchCuentasDataNet" />
+			<xs:element name="searchCuentasDataNetResponse" type="tns:searchCuentasDataNetResponse" />
+			<xs:complexType name="searchCuentasDataNet">
+				<xs:sequence>
+					<xs:element form="qualified" minOccurs="0"
+						name="cuentasDataNetFilter" type="ns1:cuentasDataNetFilter" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="searchCuentasDataNetResponse">
+				<xs:sequence>
+					<xs:element form="qualified" minOccurs="0" name="CuentaDataNet"
+						type="tns:searchResult" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="searchResult">
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="list"
+						nillable="true" type="xs:anyType" />
+					<xs:element minOccurs="0" name="totalResults" type="xs:int" />
+					<xs:element minOccurs="0" name="truncated" type="xs:boolean" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="CuentaDataNetNoRegistradaException"
+				type="tns:CuentaDataNetNoRegistradaException" />
+			<xs:complexType name="CuentaDataNetNoRegistradaException">
+				<xs:sequence>
+					<xs:element name="faultCode" nillable="true" type="xs:string" />
+					<xs:element name="faultActor" nillable="true" type="xs:string" />
+					<xs:element name="faultString" nillable="true" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="searchCuentasDataNetResponse">
+		<wsdl:part name="parameters" element="tns:searchCuentasDataNetResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="searchCuentasDataNet">
+		<wsdl:part name="parameters" element="tns:searchCuentasDataNet">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="CuentaDataNetNoRegistradaException">
+		<wsdl:part name="CuentaDataNetNoRegistradaException"
+			element="tns:CuentaDataNetNoRegistradaException">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="CuentaDataNetService">
+		<wsdl:operation name="searchCuentasDataNet">
+			<wsdl:input name="searchCuentasDataNet" message="tns:searchCuentasDataNet">
+			</wsdl:input>
+			<wsdl:output name="searchCuentasDataNetResponse" message="tns:searchCuentasDataNetResponse">
+			</wsdl:output>
+			<wsdl:fault name="CuentaDataNetNoRegistradaException"
+				message="tns:CuentaDataNetNoRegistradaException">
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="CuentaDataNetServiceServiceSoapBinding"
+		type="tns:CuentaDataNetService">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="searchCuentasDataNet">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="searchCuentasDataNet">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="searchCuentasDataNetResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="CuentaDataNetNoRegistradaException">
+				<soap:fault name="CuentaDataNetNoRegistradaException"
+					use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="CuentaDataNetServiceService">
+		<wsdl:port name="CuentaDataNetServicePort" binding="tns:CuentaDataNetServiceServiceSoapBinding">
+			<soap:address location="http://localhost:9090/CuentaDataNetServicePort" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,11 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" />
+	<soap:Body>
+		<plan:PLANES_COMERCIALES_SOCIO_Req
+			xmlns:plan="http://www.osde.com.ar/PUB/PlanesComercialesSocio"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<I_PREFIJO />
+			<I_PLAN />
+		</plan:PLANES_COMERCIALES_SOCIO_Req>
+	</soap:Body>
+</soap:Envelope>

@@ -1,0 +1,307 @@
+<SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP:Header/>
+   <SOAP:Body>
+      <ns1:CtasDatanet_resp xmlns:ns1="http://www.osde.com.ar/PUB/Ctas_Datanet/response">
+         <E_CUENTA_DATANET>
+            <CONTRATO_SOCIO>605911508</CONTRATO_SOCIO>
+            <PARTNER>1002618877</PARTNER>
+            <ORDEN>01</ORDEN>
+            <CLAVE_BANCO>034</CLAVE_BANCO>
+            <NOMBRE_BANCO>Banco Patagonia</NOMBRE_BANCO>
+            <CODIGO_SUCURSAL/>
+            <NOMBRE_SUCURSAL/>
+            <CUENTA_BANCARIA>14971000922600221</CUENTA_BANCARIA>
+            <TIPO_CUENTA_BANK>CA</TIPO_CUENTA_BANK>
+            <DESC_TIPO_CUENTA>Caja de Ahorro</DESC_TIPO_CUENTA>
+            <CBU/>
+            <TITULAR_CUENTA>PERAHIA RAQUEL</TITULAR_CUENTA>
+            <REL_BANCARIA>0001</REL_BANCARIA>
+            <ESTADO_CUENTA>04</ESTADO_CUENTA>
+            <DESCRIPCION>Activa</DESCRIPCION>
+            <REINTEGRO>X</REINTEGRO>
+            <FECHA>2015-04-22</FECHA>
+            <TIPO_CUENTA>Cuenta Crédito Datanet</TIPO_CUENTA>
+         </E_CUENTA_DATANET>
+         <E_CUENTA_DATANET>
+            <CONTRATO_SOCIO>605911508</CONTRATO_SOCIO>
+            <PARTNER>1002618877</PARTNER>
+            <ORDEN>01</ORDEN>
+            <CLAVE_BANCO>034</CLAVE_BANCO>
+            <NOMBRE_BANCO>Banco Patagonia</NOMBRE_BANCO>
+            <CODIGO_SUCURSAL/>
+            <NOMBRE_SUCURSAL/>
+            <CUENTA_BANCARIA>14971000922600222</CUENTA_BANCARIA>
+            <TIPO_CUENTA_BANK>CC</TIPO_CUENTA_BANK>
+            <DESC_TIPO_CUENTA>Cuenta Corriente</DESC_TIPO_CUENTA>
+            <CBU/>
+            <TITULAR_CUENTA>PERAHIA RAQUEL</TITULAR_CUENTA>
+            <REL_BANCARIA>0001</REL_BANCARIA>
+            <ESTADO_CUENTA>04</ESTADO_CUENTA>
+            <DESCRIPCION>Activa</DESCRIPCION>
+            <REINTEGRO>X</REINTEGRO>
+            <FECHA>2015-04-22</FECHA>
+            <TIPO_CUENTA>Cuenta Crédito Datanet</TIPO_CUENTA>
+         </E_CUENTA_DATANET>
+         <E_CUENTA_DATANET>
+            <CONTRATO_SOCIO>605911508</CONTRATO_SOCIO>
+            <PARTNER>1002618877</PARTNER>
+            <ORDEN>01</ORDEN>
+            <CLAVE_BANCO>034</CLAVE_BANCO>
+            <NOMBRE_BANCO>Banco Patagonia</NOMBRE_BANCO>
+            <CODIGO_SUCURSAL/>
+            <NOMBRE_SUCURSAL/>
+            <CUENTA_BANCARIA>14971000922600224</CUENTA_BANCARIA>
+            <TIPO_CUENTA_BANK>CA</TIPO_CUENTA_BANK>
+            <DESC_TIPO_CUENTA>Caja de Ahorro</DESC_TIPO_CUENTA>
+            <CBU/>
+            <TITULAR_CUENTA>PERAHIA RAQUEL</TITULAR_CUENTA>
+            <REL_BANCARIA>0001</REL_BANCARIA>
+            <ESTADO_CUENTA>04</ESTADO_CUENTA>
+            <DESCRIPCION>Activa</DESCRIPCION>
+            <REINTEGRO>X</REINTEGRO>
+            <FECHA>2015-04-22</FECHA>
+            <TIPO_CUENTA>Cuenta Crédito Datanet</TIPO_CUENTA>
+         </E_CUENTA_DATANET>
+         <E_CUENTA_DATANET>
+            <CONTRATO_SOCIO>605911508</CONTRATO_SOCIO>
+            <PARTNER>1002618877</PARTNER>
+            <ORDEN>01</ORDEN>
+            <CLAVE_BANCO>034</CLAVE_BANCO>
+            <NOMBRE_BANCO>Banco Patagonia</NOMBRE_BANCO>
+            <CODIGO_SUCURSAL/>
+            <NOMBRE_SUCURSAL/>
+            <CUENTA_BANCARIA>149710009226002230</CUENTA_BANCARIA>
+            <TIPO_CUENTA_BANK>CA</TIPO_CUENTA_BANK>
+            <DESC_TIPO_CUENTA>Caja de Ahorro</DESC_TIPO_CUENTA>
+            <CBU/>
+            <TITULAR_CUENTA>PERAHIA RAQUEL</TITULAR_CUENTA>
+            <REL_BANCARIA>0001</REL_BANCARIA>
+            <ESTADO_CUENTA>04</ESTADO_CUENTA>
+            <DESCRIPCION>Activa</DESCRIPCION>
+            <REINTEGRO>X</REINTEGRO>
+            <FECHA>2015-04-22</FECHA>
+            <TIPO_CUENTA>Cuenta Crédito Datanet</TIPO_CUENTA>
+         </E_CUENTA_DATANET>
+         <E_CUENTA_DATANET>
+            <CONTRATO_SOCIO>605911508</CONTRATO_SOCIO>
+            <PARTNER>1002618877</PARTNER>
+            <ORDEN>01</ORDEN>
+            <CLAVE_BANCO>034</CLAVE_BANCO>
+            <NOMBRE_BANCO>Banco Patagonia</NOMBRE_BANCO>
+            <CODIGO_SUCURSAL/>
+            <NOMBRE_SUCURSAL/>
+            <CUENTA_BANCARIA>14971000922600231</CUENTA_BANCARIA>
+            <TIPO_CUENTA_BANK>CC</TIPO_CUENTA_BANK>
+            <DESC_TIPO_CUENTA>Cuenta Corriente</DESC_TIPO_CUENTA>
+            <CBU/>
+            <TITULAR_CUENTA>PERAHIA RAQUEL</TITULAR_CUENTA>
+            <REL_BANCARIA>0001</REL_BANCARIA>
+            <ESTADO_CUENTA>04</ESTADO_CUENTA>
+            <DESCRIPCION>Activa</DESCRIPCION>
+            <REINTEGRO>X</REINTEGRO>
+            <FECHA>2015-04-22</FECHA>
+            <TIPO_CUENTA>Cuenta Crédito Datanet</TIPO_CUENTA>
+         </E_CUENTA_DATANET>
+         <E_CUENTA_DATANET>
+            <CONTRATO_SOCIO>605911508</CONTRATO_SOCIO>
+            <PARTNER>1002618877</PARTNER>
+            <ORDEN>01</ORDEN>
+            <CLAVE_BANCO>034</CLAVE_BANCO>
+            <NOMBRE_BANCO>Banco Patagonia</NOMBRE_BANCO>
+            <CODIGO_SUCURSAL/>
+            <NOMBRE_SUCURSAL/>
+            <CUENTA_BANCARIA>14971000922600402</CUENTA_BANCARIA>
+            <TIPO_CUENTA_BANK>CC</TIPO_CUENTA_BANK>
+            <DESC_TIPO_CUENTA>Cuenta Corriente</DESC_TIPO_CUENTA>
+            <CBU/>
+            <TITULAR_CUENTA>PERAHIA RAQUEL</TITULAR_CUENTA>
+            <REL_BANCARIA>0001</REL_BANCARIA>
+            <ESTADO_CUENTA>02</ESTADO_CUENTA>
+            <DESCRIPCION>De Baja</DESCRIPCION>
+            <REINTEGRO>X</REINTEGRO>
+            <FECHA>2015-04-22</FECHA>
+            <TIPO_CUENTA>Cuenta Crédito Datanet</TIPO_CUENTA>
+         </E_CUENTA_DATANET>
+         <E_CUENTA_DATANET>
+            <CONTRATO_SOCIO>605911508</CONTRATO_SOCIO>
+            <PARTNER>1002618877</PARTNER>
+            <ORDEN>01</ORDEN>
+            <CLAVE_BANCO>034</CLAVE_BANCO>
+            <NOMBRE_BANCO>Banco Patagonia</NOMBRE_BANCO>
+            <CODIGO_SUCURSAL/>
+            <NOMBRE_SUCURSAL/>
+            <CUENTA_BANCARIA>14971000922600400</CUENTA_BANCARIA>
+            <TIPO_CUENTA_BANK>CC</TIPO_CUENTA_BANK>
+            <DESC_TIPO_CUENTA>Cuenta Corriente</DESC_TIPO_CUENTA>
+            <CBU/>
+            <TITULAR_CUENTA>PERAHIA RAQUEL</TITULAR_CUENTA>
+            <REL_BANCARIA>0001</REL_BANCARIA>
+            <ESTADO_CUENTA>02</ESTADO_CUENTA>
+            <DESCRIPCION>De Baja</DESCRIPCION>
+            <REINTEGRO>X</REINTEGRO>
+            <FECHA>2015-04-22</FECHA>
+            <TIPO_CUENTA>Cuenta Crédito Datanet</TIPO_CUENTA>
+         </E_CUENTA_DATANET>
+         <E_CUENTA_DATANET>
+            <CONTRATO_SOCIO>605911508</CONTRATO_SOCIO>
+            <PARTNER>1002618877</PARTNER>
+            <ORDEN>01</ORDEN>
+            <CLAVE_BANCO>034</CLAVE_BANCO>
+            <NOMBRE_BANCO>Banco Patagonia</NOMBRE_BANCO>
+            <CODIGO_SUCURSAL/>
+            <NOMBRE_SUCURSAL/>
+            <CUENTA_BANCARIA>14971000922600411</CUENTA_BANCARIA>
+            <TIPO_CUENTA_BANK>CC</TIPO_CUENTA_BANK>
+            <DESC_TIPO_CUENTA>Cuenta Corriente</DESC_TIPO_CUENTA>
+            <CBU/>
+            <TITULAR_CUENTA>PERAHIA RAQUEL</TITULAR_CUENTA>
+            <REL_BANCARIA>0001</REL_BANCARIA>
+            <ESTADO_CUENTA>02</ESTADO_CUENTA>
+            <DESCRIPCION>De Baja</DESCRIPCION>
+            <REINTEGRO>X</REINTEGRO>
+            <FECHA>2015-04-22</FECHA>
+            <TIPO_CUENTA>Cuenta Crédito Datanet</TIPO_CUENTA>
+         </E_CUENTA_DATANET>
+         <E_CUENTA_DATANET>
+            <CONTRATO_SOCIO>605911508</CONTRATO_SOCIO>
+            <PARTNER>1002618877</PARTNER>
+            <ORDEN>01</ORDEN>
+            <CLAVE_BANCO>034</CLAVE_BANCO>
+            <NOMBRE_BANCO>Banco Patagonia</NOMBRE_BANCO>
+            <CODIGO_SUCURSAL/>
+            <NOMBRE_SUCURSAL/>
+            <CUENTA_BANCARIA>14971000922600412</CUENTA_BANCARIA>
+            <TIPO_CUENTA_BANK>CC</TIPO_CUENTA_BANK>
+            <DESC_TIPO_CUENTA>Cuenta Corriente</DESC_TIPO_CUENTA>
+            <CBU/>
+            <TITULAR_CUENTA>PERAHIA RAQUEL</TITULAR_CUENTA>
+            <REL_BANCARIA>0001</REL_BANCARIA>
+            <ESTADO_CUENTA>02</ESTADO_CUENTA>
+            <DESCRIPCION>De Baja</DESCRIPCION>
+            <REINTEGRO>X</REINTEGRO>
+            <FECHA>2015-04-22</FECHA>
+            <TIPO_CUENTA>Cuenta Crédito Datanet</TIPO_CUENTA>
+         </E_CUENTA_DATANET>
+         <E_CUENTA_DATANET>
+            <CONTRATO_SOCIO>605911508</CONTRATO_SOCIO>
+            <PARTNER>1002618877</PARTNER>
+            <ORDEN>01</ORDEN>
+            <CLAVE_BANCO>034</CLAVE_BANCO>
+            <NOMBRE_BANCO>Banco Patagonia</NOMBRE_BANCO>
+            <CODIGO_SUCURSAL/>
+            <NOMBRE_SUCURSAL/>
+            <CUENTA_BANCARIA>14971000922600414</CUENTA_BANCARIA>
+            <TIPO_CUENTA_BANK>CC</TIPO_CUENTA_BANK>
+            <DESC_TIPO_CUENTA>Cuenta Corriente</DESC_TIPO_CUENTA>
+            <CBU/>
+            <TITULAR_CUENTA>PERAHIA RAQUEL</TITULAR_CUENTA>
+            <REL_BANCARIA>0001</REL_BANCARIA>
+            <ESTADO_CUENTA>02</ESTADO_CUENTA>
+            <DESCRIPCION>De Baja</DESCRIPCION>
+            <REINTEGRO>X</REINTEGRO>
+            <FECHA>2015-04-22</FECHA>
+            <TIPO_CUENTA>Cuenta Crédito Datanet</TIPO_CUENTA>
+         </E_CUENTA_DATANET>
+         <E_CUENTA_DATANET>
+            <CONTRATO_SOCIO>605911508</CONTRATO_SOCIO>
+            <PARTNER>1002618877</PARTNER>
+            <ORDEN>01</ORDEN>
+            <CLAVE_BANCO>034</CLAVE_BANCO>
+            <NOMBRE_BANCO>Banco Patagonia</NOMBRE_BANCO>
+            <CODIGO_SUCURSAL/>
+            <NOMBRE_SUCURSAL/>
+            <CUENTA_BANCARIA>14971000922600415</CUENTA_BANCARIA>
+            <TIPO_CUENTA_BANK>CC</TIPO_CUENTA_BANK>
+            <DESC_TIPO_CUENTA>Cuenta Corriente</DESC_TIPO_CUENTA>
+            <CBU/>
+            <TITULAR_CUENTA>PERAHIA RAQUEL</TITULAR_CUENTA>
+            <REL_BANCARIA>0001</REL_BANCARIA>
+            <ESTADO_CUENTA>02</ESTADO_CUENTA>
+            <DESCRIPCION>De Baja</DESCRIPCION>
+            <REINTEGRO>X</REINTEGRO>
+            <FECHA>2015-04-22</FECHA>
+            <TIPO_CUENTA>Cuenta Crédito Datanet</TIPO_CUENTA>
+         </E_CUENTA_DATANET>
+         <E_CUENTA_DATANET>
+            <CONTRATO_SOCIO>605911508</CONTRATO_SOCIO>
+            <PARTNER>1002618877</PARTNER>
+            <ORDEN>01</ORDEN>
+            <CLAVE_BANCO>034</CLAVE_BANCO>
+            <NOMBRE_BANCO>Banco Patagonia</NOMBRE_BANCO>
+            <CODIGO_SUCURSAL/>
+            <NOMBRE_SUCURSAL/>
+            <CUENTA_BANCARIA>14971000922600416</CUENTA_BANCARIA>
+            <TIPO_CUENTA_BANK>CA</TIPO_CUENTA_BANK>
+            <DESC_TIPO_CUENTA>Caja Ahorro</DESC_TIPO_CUENTA>
+            <CBU/>
+            <TITULAR_CUENTA>PERAHIA RAQUEL</TITULAR_CUENTA>
+            <REL_BANCARIA>0001</REL_BANCARIA>
+            <ESTADO_CUENTA>02</ESTADO_CUENTA>
+            <DESCRIPCION>De Baja</DESCRIPCION>
+            <REINTEGRO>X</REINTEGRO>
+            <FECHA>2015-04-22</FECHA>
+            <TIPO_CUENTA>Cuenta Crédito Datanet</TIPO_CUENTA>
+         </E_CUENTA_DATANET>
+         <E_CUENTA_DATANET>
+            <CONTRATO_SOCIO>605911508</CONTRATO_SOCIO>
+            <PARTNER>1002618877</PARTNER>
+            <ORDEN>01</ORDEN>
+            <CLAVE_BANCO>034</CLAVE_BANCO>
+            <NOMBRE_BANCO>Banco Patagonia</NOMBRE_BANCO>
+            <CODIGO_SUCURSAL/>
+            <NOMBRE_SUCURSAL/>
+            <CUENTA_BANCARIA>14971000922600417</CUENTA_BANCARIA>
+            <TIPO_CUENTA_BANK>CC</TIPO_CUENTA_BANK>
+            <DESC_TIPO_CUENTA>Cuenta Corriente</DESC_TIPO_CUENTA>
+            <CBU/>
+            <TITULAR_CUENTA>PERAHIA RAQUEL</TITULAR_CUENTA>
+            <REL_BANCARIA>0001</REL_BANCARIA>
+            <ESTADO_CUENTA>02</ESTADO_CUENTA>
+            <DESCRIPCION>De Baja</DESCRIPCION>
+            <REINTEGRO>X</REINTEGRO>
+            <FECHA>2015-04-22</FECHA>
+            <TIPO_CUENTA>Cuenta Crédito Datanet</TIPO_CUENTA>
+         </E_CUENTA_DATANET>
+         <E_CUENTA_DATANET>
+            <CONTRATO_SOCIO>605911508</CONTRATO_SOCIO>
+            <PARTNER>1002618877</PARTNER>
+            <ORDEN>01</ORDEN>
+            <CLAVE_BANCO>034</CLAVE_BANCO>
+            <NOMBRE_BANCO>Banco Patagonia</NOMBRE_BANCO>
+            <CODIGO_SUCURSAL/>
+            <NOMBRE_SUCURSAL/>
+            <CUENTA_BANCARIA>14971000922600418</CUENTA_BANCARIA>
+            <TIPO_CUENTA_BANK>CC</TIPO_CUENTA_BANK>
+            <DESC_TIPO_CUENTA>Cuenta Corriente</DESC_TIPO_CUENTA>
+            <CBU/>
+            <TITULAR_CUENTA>PERAHIA RAQUEL</TITULAR_CUENTA>
+            <REL_BANCARIA>0001</REL_BANCARIA>
+            <ESTADO_CUENTA>02</ESTADO_CUENTA>
+            <DESCRIPCION>De Baja</DESCRIPCION>
+            <REINTEGRO>X</REINTEGRO>
+            <FECHA>2015-04-22</FECHA>
+            <TIPO_CUENTA>Cuenta Crédito Datanet</TIPO_CUENTA>
+         </E_CUENTA_DATANET>
+         <E_CUENTA_DATANET>
+            <CONTRATO_SOCIO>605911508</CONTRATO_SOCIO>
+            <PARTNER>1002618877</PARTNER>
+            <ORDEN>01</ORDEN>
+            <CLAVE_BANCO>034</CLAVE_BANCO>
+            <NOMBRE_BANCO>Banco Patagonia</NOMBRE_BANCO>
+            <CODIGO_SUCURSAL/>
+            <NOMBRE_SUCURSAL/>
+            <CUENTA_BANCARIA>14971000922600419</CUENTA_BANCARIA>
+            <TIPO_CUENTA_BANK>CC</TIPO_CUENTA_BANK>
+            <DESC_TIPO_CUENTA>Cuenta Corriente</DESC_TIPO_CUENTA>
+            <CBU/>
+            <TITULAR_CUENTA>PERAHIA RAQUEL</TITULAR_CUENTA>
+            <REL_BANCARIA>0001</REL_BANCARIA>
+            <ESTADO_CUENTA>02</ESTADO_CUENTA>
+            <DESCRIPCION>De Baja</DESCRIPCION>
+            <REINTEGRO>X</REINTEGRO>
+            <FECHA>2015-04-22</FECHA>
+            <TIPO_CUENTA>Cuenta Crédito Datanet</TIPO_CUENTA>
+         </E_CUENTA_DATANET>
+      </ns1:CtasDatanet_resp>
+   </SOAP:Body>
+</SOAP:Envelope>

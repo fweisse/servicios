@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<envelope>
+	<header>
+		<message>ejecutarPGRP7</message>
+	</header>
+	<body>
+		<IPGRUP>
+			<IOSOCIO>60653633602</IOSOCIO>
+			<FECHA>20150416</FECHA>
+		</IPGRUP>
+	</body>
+	<fault>
+		<faultcode/>
+		<faultstring/>
+		<faultactor/>
+	</fault>
+</envelope>

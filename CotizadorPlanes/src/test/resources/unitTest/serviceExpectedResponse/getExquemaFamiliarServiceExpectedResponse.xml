@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cot:getEsquemaFamiliarResponse
+	xmlns:cot="http://osde.com.ar/services/CotizadorPlanes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<cot:EsquemaFamiliar>
+		<list xsi:type="cot:esquemaFamiliar">
+			<codigoTipoEsquemaFamiliar>IJO00</codigoTipoEsquemaFamiliar>
+			<descripcionEsquemaFamiliar>Individual Joven
+			</descripcionEsquemaFamiliar>
+		</list>
+		<list xsi:type="cot:esquemaFamiliar">
+			<codigoTipoEsquemaFamiliar>IJO01</codigoTipoEsquemaFamiliar>
+			<descripcionEsquemaFamiliar>Individual Joven con 1 hijo
+			</descripcionEsquemaFamiliar>
+		</list>
+		<totalResults>2</totalResults>
+		<truncated>false</truncated>
+	</cot:EsquemaFamiliar>
+</cot:getEsquemaFamiliarResponse>

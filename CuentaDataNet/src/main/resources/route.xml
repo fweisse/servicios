@@ -1,0 +1,41 @@
+<routes xmlns="http://camel.apache.org/schema/spring">
+  <route>
+    <from uri="switchyard://CuentaDataNet"/>
+    <log message="CuentaDataNet - message received: ${body}"/>
+   
+   
+    <to uri="log:test?showAll=true"/>
+        <log message="Header operationName ${header.org.switchyard.soap.messageName}" loggingLevel="INFO"/>
+        <setHeader headerName="operationName">
+            <simple>${header.org.switchyard.soap.messageName}</simple>
+        </setHeader>
+        <!-- ContentBasedRouter - Verifico la operación invocada, para cada una se ejecuta una ruta especifica -->
+        <choice>
+        	<when>
+        		<simple>${header.org.switchyard.soap.messageName} == 'searchCuentasDataNet'</simple>
+        		<to uri="direct:searchCuentasDataNet"/>
+        	</when>
+        
+        	<otherwise>
+        		<log message="Operación inexistente en el ruteo del ESB" loggingLevel="ERROR"/>
+				<setBody><simple>Operación inexistente en el ruteo del ESB</simple></setBody>
+        	</otherwise>
+        </choice>
+    </route>
+    
+    
+     <!-- Operación getCotizacion -->
+    <route>
+    	<from uri="direct:searchCuentasDataNet"/>
+    	<!-- <log message="${header.org.switchyard.soap.messageName}" loggingLevel="INFO"/> -->   	
+    	<to uri="xslt:META-INF/xslt/soapToXml.xslt"/>
+    	<!-- <log message="${header.org.switchyard.soap.messageName} - antes del provider: ${body}" loggingLevel="INFO"/>-->
+    	<to uri="switchyard://ConCtasDatanetOut"/>
+    	<!-- <log message="${header.org.switchyard.soap.messageName} - message received antes de xmlToSoap : ${body}" loggingLevel="INFO"/> -->
+    	<to uri="xslt:META-INF/xslt/xmlToSoap.xslt"/> 
+  </route>
+   
+   
+   
+    
+</routes>

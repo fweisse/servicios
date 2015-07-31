@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:cuen="http://osde.com.ar/services/cuentadatanetservice">
+	<SOAP:Body>
+		<ns1:CtasDatanet_resp
+			xmlns:ns1="http://www.osde.com.ar/PUB/Ctas_Datanet/response">
+			<ns1:banco>
+				<ns1:codigo>034</ns1:codigo>
+				<ns1:nombre>Banco Patagonia</ns1:nombre>
+				<ns1:sucursal>
+					<ns1:codigo />
+					<ns1:descripcion />
+				</ns1:sucursal>
+			</ns1:banco>
+			<ns1:cbu />
+			<ns1:contratoBid>
+				<ns1:nroContrato>605911508</ns1:nroContrato>
+			</ns1:contratoBid>
+			<ns1:cuenta>
+				<ns1:numero>14971000922600221</ns1:numero>
+				<ns1:tipo>CA</ns1:tipo>
+			</ns1:cuenta>
+			<ns1:estado>
+				<ns1:codigo>04</ns1:codigo>
+				<ns1:descripcion>Activa</ns1:descripcion>
+			</ns1:estado>
+			<ns1:fechaActivacion>2015-04-22</ns1:fechaActivacion>
+			<ns1:interlocutorComercial>1002618877</ns1:interlocutorComercial>
+			<ns1:marcaCuentaReintegro>X</ns1:marcaCuentaReintegro>
+			<ns1:nombreTitularCuenta>PERAHIA RAQUEL</ns1:nombreTitularCuenta>
+			<ns1:nroOrden>01</ns1:nroOrden>
+			<ns1:relacionBancaria>0001</ns1:relacionBancaria>
+			<ns1:tipoCuenta>
+				<ns1:codigo>CA</ns1:codigo>
+				<ns1:descripcion>Cuenta Crédito Datanet</ns1:descripcion>
+			</ns1:tipoCuenta>
+			<ns1:banco>
+				<ns1:codigo>034</ns1:codigo>
+				<ns1:nombre>Banco Patagonia</ns1:nombre>
+				<ns1:sucursal>
+					<ns1:codigo />
+					<ns1:descripcion />
+				</ns1:sucursal>
+			</ns1:banco>
+			<ns1:cbu />
+			<ns1:contratoBid>
+				<ns1:nroContrato>605911508</ns1:nroContrato>
+			</ns1:contratoBid>
+			<ns1:cuenta>
+				<ns1:numero>14971000922600221</ns1:numero>
+				<ns1:tipo>CA</ns1:tipo>
+			</ns1:cuenta>
+			<ns1:estado>
+				<ns1:codigo>04</ns1:codigo>
+				<ns1:descripcion>Activa</ns1:descripcion>
+			</ns1:estado>
+			<ns1:fechaActivacion>2015-04-22</ns1:fechaActivacion>
+			<ns1:interlocutorComercial>1002618877</ns1:interlocutorComercial>
+			<ns1:marcaCuentaReintegro>X</ns1:marcaCuentaReintegro>
+			<ns1:nombreTitularCuenta>PERAHIA RAQUEL</ns1:nombreTitularCuenta>
+			<ns1:nroOrden>01</ns1:nroOrden>
+			<ns1:relacionBancaria>0001</ns1:relacionBancaria>
+			<ns1:tipoCuenta>
+				<ns1:codigo>CA</ns1:codigo>
+				<ns1:descripcion>Cuenta Crédito Datanet</ns1:descripcion>
+			</ns1:tipoCuenta>
+			<ns1:banco>
+				<ns1:codigo>034</ns1:codigo>
+				<ns1:nombre>Banco Patagonia</ns1:nombre>
+				<ns1:sucursal>
+					<ns1:codigo />
+					<ns1:descripcion />
+				</ns1:sucursal>
+			</ns1:banco>
+			<ns1:cbu />
+			<ns1:contratoBid>
+				<ns1:nroContrato>605911508</ns1:nroContrato>
+			</ns1:contratoBid>
+			<ns1:cuenta>
+				<ns1:numero>14971000922600221</ns1:numero>
+				<ns1:tipo>CA</ns1:tipo>
+			</ns1:cuenta>
+			<ns1:estado>
+				<ns1:codigo>04</ns1:codigo>
+				<ns1:descripcion>Activa</ns1:descripcion>
+			</ns1:estado>
+			<ns1:fechaActivacion>2015-04-22</ns1:fechaActivacion>
+			<ns1:interlocutorComercial>1002618877</ns1:interlocutorComercial>
+			<ns1:marcaCuentaReintegro>X</ns1:marcaCuentaReintegro>
+			<ns1:nombreTitularCuenta>PERAHIA RAQUEL</ns1:nombreTitularCuenta>
+			<ns1:nroOrden>01</ns1:nroOrden>
+			<ns1:relacionBancaria>0001</ns1:relacionBancaria>
+			<ns1:tipoCuenta>
+				<ns1:codigo>CA</ns1:codigo>
+				<ns1:descripcion>Cuenta Crédito Datanet</ns1:descripcion>
+			</ns1:tipoCuenta>
+			<ns1:banco>
+				<ns1:codigo>034</ns1:codigo>
+				<ns1:nombre>Banco Patagonia</ns1:nombre>
+				<ns1:sucursal>
+					<ns1:codigo />
+					<ns1:descripcion />
+				</ns1:sucursal>
+			</ns1:banco>
+			<ns1:cbu />
+			<ns1:contratoBid>
+				<ns1:nroContrato>605911508</ns1:nroContrato>
+			</ns1:contratoBid>
+			<ns1:cuenta>
+				<ns1:numero>14971000922600221</ns1:numero>
+				<ns1:tipo>CA</ns1:tipo>
+			</ns1:cuenta>
+			<ns1:estado>
+				<ns1:codigo>04</ns1:codigo>
+				<ns1:descripcion>Activa</ns1:descripcion>
+			</ns1:estado>
+			<ns1:fechaActivacion>2015-04-22</ns1:fechaActivacion>
+			<ns1:interlocutorComercial>1002618877</ns1:interlocutorComercial>
+			<ns1:marcaCuentaReintegro>X</ns1:marcaCuentaReintegro>
+			<ns1:nombreTitularCuenta>PERAHIA RAQUEL</ns1:nombreTitularCuenta>
+			<ns1:nroOrden>01</ns1:nroOrden>
+			<ns1:relacionBancaria>0001</ns1:relacionBancaria>
+			<ns1:tipoCuenta>
+				<ns1:codigo>CA</ns1:codigo>
+				<ns1:descripcion>Cuenta Crédito Datanet</ns1:descripcion>
+			</ns1:tipoCuenta>
+			<ns1:banco>
+				<ns1:codigo>034</ns1:codigo>
+				<ns1:nombre>Banco Patagonia</ns1:nombre>
+				<ns1:sucursal>
+					<ns1:codigo />
+					<ns1:descripcion />
+				</ns1:sucursal>
+			</ns1:banco>
+			<ns1:cbu />
+			<ns1:contratoBid>
+				<ns1:nroContrato>605911508</ns1:nroContrato>
+			</ns1:contratoBid>
+			<ns1:cuenta>
+				<ns1:numero>14971000922600221</ns1:numero>
+				<ns1:tipo>CA</ns1:tipo>
+			</ns1:cuenta>
+			<ns1:estado>
+				<ns1:codigo>04</ns1:codigo>
+				<ns1:descripcion>Activa</ns1:descripcion>
+			</ns1:estado>
+			<ns1:fechaActivacion>2015-04-22</ns1:fechaActivacion>
+			<ns1:interlocutorComercial>1002618877</ns1:interlocutorComercial>
+			<ns1:marcaCuentaReintegro>X</ns1:marcaCuentaReintegro>
+			<ns1:nombreTitularCuenta>PERAHIA RAQUEL</ns1:nombreTitularCuenta>
+			<ns1:nroOrden>01</ns1:nroOrden>
+			<ns1:relacionBancaria>0001</ns1:relacionBancaria>
+			<ns1:tipoCuenta>
+				<ns1:codigo>CA</ns1:codigo>
+				<ns1:descripcion>Cuenta Crédito Datanet</ns1:descripcion>
+			</ns1:tipoCuenta>
+			<ns1:banco>
+				<ns1:codigo>034</ns1:codigo>
+				<ns1:nombre>Banco Patagonia</ns1:nombre>
+				<ns1:sucursal>
+					<ns1:codigo />
+					<ns1:descripcion />
+				</ns1:sucursal>
+			</ns1:banco>
+			<ns1:cbu />
+			<ns1:contratoBid>
+				<ns1:nroContrato>605911508</ns1:nroContrato>
+			</ns1:contratoBid>
+			<ns1:cuenta>
+				<ns1:numero>14971000922600221</ns1:numero>
+				<ns1:tipo>CA</ns1:tipo>
+			</ns1:cuenta>
+			<ns1:estado>
+				<ns1:codigo>04</ns1:codigo>
+				<ns1:descripcion>Activa</ns1:descripcion>
+			</ns1:estado>
+			<ns1:fechaActivacion>2015-04-22</ns1:fechaActivacion>
+			<ns1:interlocutorComercial>1002618877</ns1:interlocutorComercial>
+			<ns1:marcaCuentaReintegro>X</ns1:marcaCuentaReintegro>
+			<ns1:nombreTitularCuenta>PERAHIA RAQUEL</ns1:nombreTitularCuenta>
+			<ns1:nroOrden>01</ns1:nroOrden>
+			<ns1:relacionBancaria>0001</ns1:relacionBancaria>
+			<ns1:tipoCuenta>
+				<ns1:codigo>CA</ns1:codigo>
+				<ns1:descripcion>Cuenta Crédito Datanet</ns1:descripcion>
+			</ns1:tipoCuenta>
+			<ns1:banco>
+				<ns1:codigo>034</ns1:codigo>
+				<ns1:nombre>Banco Patagonia</ns1:nombre>
+				<ns1:sucursal>
+					<ns1:codigo />
+					<ns1:descripcion />
+				</ns1:sucursal>
+			</ns1:banco>
+			<ns1:cbu />
+			<ns1:contratoBid>
+				<ns1:nroContrato>605911508</ns1:nroContrato>
+			</ns1:contratoBid>
+			<ns1:cuenta>
+				<ns1:numero>14971000922600221</ns1:numero>
+				<ns1:tipo>CA</ns1:tipo>
+			</ns1:cuenta>
+			<ns1:estado>
+				<ns1:codigo>04</ns1:codigo>
+				<ns1:descripcion>Activa</ns1:descripcion>
+			</ns1:estado>
+			<ns1:fechaActivacion>2015-04-22</ns1:fechaActivacion>
+			<ns1:interlocutorComercial>1002618877</ns1:interlocutorComercial>
+			<ns1:marcaCuentaReintegro>X</ns1:marcaCuentaReintegro>
+			<ns1:nombreTitularCuenta>PERAHIA RAQUEL</ns1:nombreTitularCuenta>
+			<ns1:nroOrden>01</ns1:nroOrden>
+			<ns1:relacionBancaria>0001</ns1:relacionBancaria>
+			<ns1:tipoCuenta>
+				<ns1:codigo>CA</ns1:codigo>
+				<ns1:descripcion>Cuenta Crédito Datanet</ns1:descripcion>
+			</ns1:tipoCuenta>
+			<ns1:banco>
+				<ns1:codigo>034</ns1:codigo>
+				<ns1:nombre>Banco Patagonia</ns1:nombre>
+				<ns1:sucursal>
+					<ns1:codigo />
+					<ns1:descripcion />
+				</ns1:sucursal>
+			</ns1:banco>
+			<ns1:cbu />
+			<ns1:contratoBid>
+				<ns1:nroContrato>605911508</ns1:nroContrato>
+			</ns1:contratoBid>
+			<ns1:cuenta>
+				<ns1:numero>14971000922600221</ns1:numero>
+				<ns1:tipo>CA</ns1:tipo>
+			</ns1:cuenta>
+			<ns1:estado>
+				<ns1:codigo>04</ns1:codigo>
+				<ns1:descripcion>Activa</ns1:descripcion>
+			</ns1:estado>
+			<ns1:fechaActivacion>2015-04-22</ns1:fechaActivacion>
+			<ns1:interlocutorComercial>1002618877</ns1:interlocutorComercial>
+			<ns1:marcaCuentaReintegro>X</ns1:marcaCuentaReintegro>
+			<ns1:nombreTitularCuenta>PERAHIA RAQUEL</ns1:nombreTitularCuenta>
+			<ns1:nroOrden>01</ns1:nroOrden>
+			<ns1:relacionBancaria>0001</ns1:relacionBancaria>
+			<ns1:tipoCuenta>
+				<ns1:codigo>CA</ns1:codigo>
+				<ns1:descripcion>Cuenta Crédito Datanet</ns1:descripcion>
+			</ns1:tipoCuenta>
+			<ns1:banco>
+				<ns1:codigo>034</ns1:codigo>
+				<ns1:nombre>Banco Patagonia</ns1:nombre>
+				<ns1:sucursal>
+					<ns1:codigo />
+					<ns1:descripcion />
+				</ns1:sucursal>
+			</ns1:banco>
+			<ns1:cbu />
+			<ns1:contratoBid>
+				<ns1:nroContrato>605911508</ns1:nroContrato>
+			</ns1:contratoBid>
+			<ns1:cuenta>
+				<ns1:numero>14971000922600221</ns1:numero>
+				<ns1:tipo>CA</ns1:tipo>
+			</ns1:cuenta>
+			<ns1:estado>
+				<ns1:codigo>04</ns1:codigo>
+				<ns1:descripcion>Activa</ns1:descripcion>
+			</ns1:estado>
+			<ns1:fechaActivacion>2015-04-22</ns1:fechaActivacion>
+			<ns1:interlocutorComercial>1002618877</ns1:interlocutorComercial>
+			<ns1:marcaCuentaReintegro>X</ns1:marcaCuentaReintegro>
+			<ns1:nombreTitularCuenta>PERAHIA RAQUEL</ns1:nombreTitularCuenta>
+			<ns1:nroOrden>01</ns1:nroOrden>
+			<ns1:relacionBancaria>0001</ns1:relacionBancaria>
+			<ns1:tipoCuenta>
+				<ns1:codigo>CA</ns1:codigo>
+				<ns1:descripcion>Cuenta Crédito Datanet</ns1:descripcion>
+			</ns1:tipoCuenta>
+			<ns1:banco>
+				<ns1:codigo>034</ns1:codigo>
+				<ns1:nombre>Banco Patagonia</ns1:nombre>
+				<ns1:sucursal>
+					<ns1:codigo />
+					<ns1:descripcion />
+				</ns1:sucursal>
+			</ns1:banco>
+			<ns1:cbu />
+			<ns1:contratoBid>
+				<ns1:nroContrato>605911508</ns1:nroContrato>
+			</ns1:contratoBid>
+			<ns1:cuenta>
+				<ns1:numero>14971000922600221</ns1:numero>
+				<ns1:tipo>CA</ns1:tipo>
+			</ns1:cuenta>
+			<ns1:estado>
+				<ns1:codigo>04</ns1:codigo>
+				<ns1:descripcion>Activa</ns1:descripcion>
+			</ns1:estado>
+			<ns1:fechaActivacion>2015-04-22</ns1:fechaActivacion>
+			<ns1:interlocutorComercial>1002618877</ns1:interlocutorComercial>
+			<ns1:marcaCuentaReintegro>X</ns1:marcaCuentaReintegro>
+			<ns1:nombreTitularCuenta>PERAHIA RAQUEL</ns1:nombreTitularCuenta>
+			<ns1:nroOrden>01</ns1:nroOrden>
+			<ns1:relacionBancaria>0001</ns1:relacionBancaria>
+			<ns1:tipoCuenta>
+				<ns1:codigo>CA</ns1:codigo>
+				<ns1:descripcion>Cuenta Crédito Datanet</ns1:descripcion>
+			</ns1:tipoCuenta>
+			<ns1:banco>
+				<ns1:codigo>034</ns1:codigo>
+				<ns1:nombre>Banco Patagonia</ns1:nombre>
+				<ns1:sucursal>
+					<ns1:codigo />
+					<ns1:descripcion />
+				</ns1:sucursal>
+			</ns1:banco>
+			<ns1:cbu />
+			<ns1:contratoBid>
+				<ns1:nroContrato>605911508</ns1:nroContrato>
+			</ns1:contratoBid>
+			<ns1:cuenta>
+				<ns1:numero>14971000922600221</ns1:numero>
+				<ns1:tipo>CA</ns1:tipo>
+			</ns1:cuenta>
+			<ns1:estado>
+				<ns1:codigo>04</ns1:codigo>
+				<ns1:descripcion>Activa</ns1:descripcion>
+			</ns1:estado>
+			<ns1:fechaActivacion>2015-04-22</ns1:fechaActivacion>
+			<ns1:interlocutorComercial>1002618877</ns1:interlocutorComercial>
+			<ns1:marcaCuentaReintegro>X</ns1:marcaCuentaReintegro>
+			<ns1:nombreTitularCuenta>PERAHIA RAQUEL</ns1:nombreTitularCuenta>
+			<ns1:nroOrden>01</ns1:nroOrden>
+			<ns1:relacionBancaria>0001</ns1:relacionBancaria>
+			<ns1:tipoCuenta>
+				<ns1:codigo>CA</ns1:codigo>
+				<ns1:descripcion>Cuenta Crédito Datanet</ns1:descripcion>
+			</ns1:tipoCuenta>
+			<ns1:banco>
+				<ns1:codigo>034</ns1:codigo>
+				<ns1:nombre>Banco Patagonia</ns1:nombre>
+				<ns1:sucursal>
+					<ns1:codigo />
+					<ns1:descripcion />
+				</ns1:sucursal>
+			</ns1:banco>
+			<ns1:cbu />
+			<ns1:contratoBid>
+				<ns1:nroContrato>605911508</ns1:nroContrato>
+			</ns1:contratoBid>
+			<ns1:cuenta>
+				<ns1:numero>14971000922600221</ns1:numero>
+				<ns1:tipo>CA</ns1:tipo>
+			</ns1:cuenta>
+			<ns1:estado>
+				<ns1:codigo>04</ns1:codigo>
+				<ns1:descripcion>Activa</ns1:descripcion>
+			</ns1:estado>
+			<ns1:fechaActivacion>2015-04-22</ns1:fechaActivacion>
+			<ns1:interlocutorComercial>1002618877</ns1:interlocutorComercial>
+			<ns1:marcaCuentaReintegro>X</ns1:marcaCuentaReintegro>
+			<ns1:nombreTitularCuenta>PERAHIA RAQUEL</ns1:nombreTitularCuenta>
+			<ns1:nroOrden>01</ns1:nroOrden>
+			<ns1:relacionBancaria>0001</ns1:relacionBancaria>
+			<ns1:tipoCuenta>
+				<ns1:codigo>CA</ns1:codigo>
+				<ns1:descripcion>Cuenta Crédito Datanet</ns1:descripcion>
+			</ns1:tipoCuenta>
+			<ns1:banco>
+				<ns1:codigo>034</ns1:codigo>
+				<ns1:nombre>Banco Patagonia</ns1:nombre>
+				<ns1:sucursal>
+					<ns1:codigo />
+					<ns1:descripcion />
+				</ns1:sucursal>
+			</ns1:banco>
+			<ns1:cbu />
+			<ns1:contratoBid>
+				<ns1:nroContrato>605911508</ns1:nroContrato>
+			</ns1:contratoBid>
+			<ns1:cuenta>
+				<ns1:numero>14971000922600221</ns1:numero>
+				<ns1:tipo>CA</ns1:tipo>
+			</ns1:cuenta>
+			<ns1:estado>
+				<ns1:codigo>04</ns1:codigo>
+				<ns1:descripcion>Activa</ns1:descripcion>
+			</ns1:estado>
+			<ns1:fechaActivacion>2015-04-22</ns1:fechaActivacion>
+			<ns1:interlocutorComercial>1002618877</ns1:interlocutorComercial>
+			<ns1:marcaCuentaReintegro>X</ns1:marcaCuentaReintegro>
+			<ns1:nombreTitularCuenta>PERAHIA RAQUEL</ns1:nombreTitularCuenta>
+			<ns1:nroOrden>01</ns1:nroOrden>
+			<ns1:relacionBancaria>0001</ns1:relacionBancaria>
+			<ns1:tipoCuenta>
+				<ns1:codigo>CA</ns1:codigo>
+				<ns1:descripcion>Cuenta Crédito Datanet</ns1:descripcion>
+			</ns1:tipoCuenta>
+			<ns1:banco>
+				<ns1:codigo>034</ns1:codigo>
+				<ns1:nombre>Banco Patagonia</ns1:nombre>
+				<ns1:sucursal>
+					<ns1:codigo />
+					<ns1:descripcion />
+				</ns1:sucursal>
+			</ns1:banco>
+			<ns1:cbu />
+			<ns1:contratoBid>
+				<ns1:nroContrato>605911508</ns1:nroContrato>
+			</ns1:contratoBid>
+			<ns1:cuenta>
+				<ns1:numero>14971000922600221</ns1:numero>
+				<ns1:tipo>CA</ns1:tipo>
+			</ns1:cuenta>
+			<ns1:estado>
+				<ns1:codigo>04</ns1:codigo>
+				<ns1:descripcion>Activa</ns1:descripcion>
+			</ns1:estado>
+			<ns1:fechaActivacion>2015-04-22</ns1:fechaActivacion>
+			<ns1:interlocutorComercial>1002618877</ns1:interlocutorComercial>
+			<ns1:marcaCuentaReintegro>X</ns1:marcaCuentaReintegro>
+			<ns1:nombreTitularCuenta>PERAHIA RAQUEL</ns1:nombreTitularCuenta>
+			<ns1:nroOrden>01</ns1:nroOrden>
+			<ns1:relacionBancaria>0001</ns1:relacionBancaria>
+			<ns1:tipoCuenta>
+				<ns1:codigo>CA</ns1:codigo>
+				<ns1:descripcion>Cuenta Crédito Datanet</ns1:descripcion>
+			</ns1:tipoCuenta>
+			<ns1:banco>
+				<ns1:codigo>034</ns1:codigo>
+				<ns1:nombre>Banco Patagonia</ns1:nombre>
+				<ns1:sucursal>
+					<ns1:codigo />
+					<ns1:descripcion />
+				</ns1:sucursal>
+			</ns1:banco>
+			<ns1:cbu />
+			<ns1:contratoBid>
+				<ns1:nroContrato>605911508</ns1:nroContrato>
+			</ns1:contratoBid>
+			<ns1:cuenta>
+				<ns1:numero>14971000922600221</ns1:numero>
+				<ns1:tipo>CA</ns1:tipo>
+			</ns1:cuenta>
+			<ns1:estado>
+				<ns1:codigo>04</ns1:codigo>
+				<ns1:descripcion>Activa</ns1:descripcion>
+			</ns1:estado>
+			<ns1:fechaActivacion>2015-04-22</ns1:fechaActivacion>
+			<ns1:interlocutorComercial>1002618877</ns1:interlocutorComercial>
+			<ns1:marcaCuentaReintegro>X</ns1:marcaCuentaReintegro>
+			<ns1:nombreTitularCuenta>PERAHIA RAQUEL</ns1:nombreTitularCuenta>
+			<ns1:nroOrden>01</ns1:nroOrden>
+			<ns1:relacionBancaria>0001</ns1:relacionBancaria>
+			<ns1:tipoCuenta>
+				<ns1:codigo>CA</ns1:codigo>
+				<ns1:descripcion>Cuenta Crédito Datanet</ns1:descripcion>
+			</ns1:tipoCuenta>
+		</ns1:CtasDatanet_resp>
+	</SOAP:Body>
+</SOAP:Envelope>
